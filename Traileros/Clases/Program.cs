@@ -16,7 +16,7 @@ namespace Traileros
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new operadorEditar());
+            Application.Run(new MDI());
         }
     }
 }

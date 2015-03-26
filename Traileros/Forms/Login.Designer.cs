@@ -34,83 +34,91 @@
             this.txbPassword = new System.Windows.Forms.TextBox();
             this.btnEntrar = new System.Windows.Forms.Button();
             this.btnSalir = new System.Windows.Forms.Button();
-            this.pcb = new System.Windows.Forms.PictureBox();
-            ((System.ComponentModel.ISupportInitialize)(this.pcb)).BeginInit();
+            this.pcbLogin = new System.Windows.Forms.PictureBox();
+            ((System.ComponentModel.ISupportInitialize)(this.pcbLogin)).BeginInit();
             this.SuspendLayout();
             // 
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(24, 168);
+            this.label1.Location = new System.Drawing.Point(35, 182);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(43, 13);
+            this.label1.Size = new System.Drawing.Size(46, 13);
             this.label1.TabIndex = 0;
-            this.label1.Text = "Usuario";
+            this.label1.Text = "Usuario:";
             // 
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(6, 212);
+            this.label2.Location = new System.Drawing.Point(17, 226);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(61, 13);
+            this.label2.Size = new System.Drawing.Size(64, 13);
             this.label2.TabIndex = 1;
-            this.label2.Text = "Contraseña";
+            this.label2.Text = "Contraseña:";
             // 
             // txbUsername
             // 
-            this.txbUsername.Location = new System.Drawing.Point(88, 161);
+            this.txbUsername.Location = new System.Drawing.Point(87, 179);
             this.txbUsername.Name = "txbUsername";
-            this.txbUsername.Size = new System.Drawing.Size(177, 20);
+            this.txbUsername.Size = new System.Drawing.Size(150, 20);
             this.txbUsername.TabIndex = 2;
+            this.txbUsername.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txbUsername_KeyPress);
             // 
             // txbPassword
             // 
-            this.txbPassword.Location = new System.Drawing.Point(88, 205);
+            this.txbPassword.Location = new System.Drawing.Point(87, 223);
             this.txbPassword.Name = "txbPassword";
-            this.txbPassword.Size = new System.Drawing.Size(177, 20);
+            this.txbPassword.Size = new System.Drawing.Size(150, 20);
             this.txbPassword.TabIndex = 3;
+            this.txbPassword.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txbPassword_KeyPress);
             // 
             // btnEntrar
             // 
-            this.btnEntrar.Location = new System.Drawing.Point(27, 275);
+            this.btnEntrar.Location = new System.Drawing.Point(156, 284);
             this.btnEntrar.Name = "btnEntrar";
-            this.btnEntrar.Size = new System.Drawing.Size(75, 23);
+            this.btnEntrar.Size = new System.Drawing.Size(100, 30);
             this.btnEntrar.TabIndex = 4;
             this.btnEntrar.Text = "Entrar";
             this.btnEntrar.UseVisualStyleBackColor = true;
+            this.btnEntrar.Click += new System.EventHandler(this.btnEntrar_Click);
             // 
             // btnSalir
             // 
-            this.btnSalir.Location = new System.Drawing.Point(190, 275);
+            this.btnSalir.Location = new System.Drawing.Point(27, 284);
             this.btnSalir.Name = "btnSalir";
-            this.btnSalir.Size = new System.Drawing.Size(75, 23);
+            this.btnSalir.Size = new System.Drawing.Size(100, 30);
             this.btnSalir.TabIndex = 5;
             this.btnSalir.Text = "Salir";
             this.btnSalir.UseVisualStyleBackColor = true;
+            this.btnSalir.Click += new System.EventHandler(this.btnSalir_Click);
             // 
-            // pcb
+            // pcbLogin
             // 
-            this.pcb.Location = new System.Drawing.Point(88, 12);
-            this.pcb.Name = "pcb";
-            this.pcb.Size = new System.Drawing.Size(100, 127);
-            this.pcb.TabIndex = 6;
-            this.pcb.TabStop = false;
+            this.pcbLogin.Location = new System.Drawing.Point(97, 33);
+            this.pcbLogin.Name = "pcbLogin";
+            this.pcbLogin.Size = new System.Drawing.Size(93, 106);
+            this.pcbLogin.TabIndex = 6;
+            this.pcbLogin.TabStop = false;
             // 
             // Login
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.AutoSize = true;
+            this.BackColor = System.Drawing.SystemColors.Control;
             this.ClientSize = new System.Drawing.Size(289, 347);
-            this.Controls.Add(this.pcb);
+            this.Controls.Add(this.pcbLogin);
             this.Controls.Add(this.btnSalir);
             this.Controls.Add(this.btnEntrar);
             this.Controls.Add(this.txbPassword);
             this.Controls.Add(this.txbUsername);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "Login";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Login";
-            ((System.ComponentModel.ISupportInitialize)(this.pcb)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pcbLogin)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -124,6 +132,6 @@
         private System.Windows.Forms.TextBox txbPassword;
         private System.Windows.Forms.Button btnEntrar;
         private System.Windows.Forms.Button btnSalir;
-        private System.Windows.Forms.PictureBox pcb;
+        private System.Windows.Forms.PictureBox pcbLogin;
     }
 }

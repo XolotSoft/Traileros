@@ -17,9 +17,23 @@ namespace Traileros
             InitializeComponent();
         }
 
+        private static operadorEditar frmInst = null;
+
+        public static operadorEditar Instancia()
+        {
+            if (frmInst == null || frmInst.IsDisposed == true)
+            {
+                frmInst = new operadorEditar();
+            }
+
+            frmInst.BringToFront();
+            return frmInst;
+        }
+
         private void operadorEditar_Load(object sender, EventArgs e)
         {
-
+            MinimizeBox = false;
+            MaximizeBox = false;
         }
 
         private void btnModificar_Click(object sender, EventArgs e)
@@ -37,11 +51,5 @@ namespace Traileros
 
             }
         }
-
-        private void textBox9_TextChanged(object sender, EventArgs e)
-        {
-
-        }
-
     }
 }

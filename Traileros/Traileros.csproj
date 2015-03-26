@@ -122,6 +122,7 @@
       <DependentUpon>vehiculoNuevo.cs</DependentUpon>
     </Compile>
     <Compile Include="Clases\Validar.cs" />
+    <Compile Include="Clases\Vacio.cs" />
     <EmbeddedResource Include="Forms\Operadores\operadorEditar.resx">
       <DependentUpon>operadorEditar.cs</DependentUpon>
     </EmbeddedResource>
