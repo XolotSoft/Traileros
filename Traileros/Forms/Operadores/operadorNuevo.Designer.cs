@@ -59,7 +59,7 @@
             this.btnCrear.Location = new System.Drawing.Point(545, 293);
             this.btnCrear.Name = "btnCrear";
             this.btnCrear.Size = new System.Drawing.Size(100, 35);
-            this.btnCrear.TabIndex = 5;
+            this.btnCrear.TabIndex = 11;
             this.btnCrear.Text = "Crear";
             this.btnCrear.UseVisualStyleBackColor = true;
             this.btnCrear.Click += new System.EventHandler(this.btnCrear_Click);
@@ -69,7 +69,7 @@
             this.btnLimpiar.Location = new System.Drawing.Point(407, 293);
             this.btnLimpiar.Name = "btnLimpiar";
             this.btnLimpiar.Size = new System.Drawing.Size(100, 35);
-            this.btnLimpiar.TabIndex = 6;
+            this.btnLimpiar.TabIndex = 12;
             this.btnLimpiar.Text = "Limpiar";
             this.btnLimpiar.UseVisualStyleBackColor = true;
             this.btnLimpiar.Click += new System.EventHandler(this.btnLimpiar_Click);
@@ -88,15 +88,32 @@
             this.txbLicencia.Location = new System.Drawing.Point(96, 311);
             this.txbLicencia.Name = "txbLicencia";
             this.txbLicencia.Size = new System.Drawing.Size(184, 23);
-            this.txbLicencia.TabIndex = 68;
+            this.txbLicencia.TabIndex = 6;
             // 
             // cmbDelegacion
             // 
             this.cmbDelegacion.FormattingEnabled = true;
+            this.cmbDelegacion.Items.AddRange(new object[] {
+            "Álvaro Obregón",
+            "Azcapotzalco",
+            "Benito Juárez",
+            "Coyoacán",
+            "Cuajimalpa de Morelos",
+            "Cuauhtémoc",
+            "Gustavo A. Madero",
+            "Iztacalco",
+            "Iztapalapa",
+            "La Magdalena Contreras",
+            "Miguel Hidalgo",
+            "Milpa Alta",
+            "Tláhuac",
+            "Tlalpan",
+            "Venustiano Carranza",
+            "Xochimilco"});
             this.cmbDelegacion.Location = new System.Drawing.Point(455, 157);
             this.cmbDelegacion.Name = "cmbDelegacion";
             this.cmbDelegacion.Size = new System.Drawing.Size(184, 23);
-            this.cmbDelegacion.TabIndex = 67;
+            this.cmbDelegacion.TabIndex = 10;
             // 
             // label10
             // 
@@ -121,7 +138,7 @@
             this.txbColonia.Location = new System.Drawing.Point(455, 117);
             this.txbColonia.Name = "txbColonia";
             this.txbColonia.Size = new System.Drawing.Size(184, 23);
-            this.txbColonia.TabIndex = 64;
+            this.txbColonia.TabIndex = 9;
             // 
             // label8
             // 
@@ -137,7 +154,7 @@
             this.txbNumero.Location = new System.Drawing.Point(455, 78);
             this.txbNumero.Name = "txbNumero";
             this.txbNumero.Size = new System.Drawing.Size(184, 23);
-            this.txbNumero.TabIndex = 62;
+            this.txbNumero.TabIndex = 8;
             // 
             // label7
             // 
@@ -153,7 +170,7 @@
             this.txbCalle.Location = new System.Drawing.Point(455, 38);
             this.txbCalle.Name = "txbCalle";
             this.txbCalle.Size = new System.Drawing.Size(184, 23);
-            this.txbCalle.TabIndex = 60;
+            this.txbCalle.TabIndex = 7;
             // 
             // label6
             // 
@@ -169,7 +186,7 @@
             this.dtpNacimiento.Location = new System.Drawing.Point(96, 160);
             this.dtpNacimiento.Name = "dtpNacimiento";
             this.dtpNacimiento.Size = new System.Drawing.Size(184, 23);
-            this.dtpNacimiento.TabIndex = 58;
+            this.dtpNacimiento.TabIndex = 3;
             // 
             // label5
             // 
@@ -221,35 +238,35 @@
             this.txbEmail.Location = new System.Drawing.Point(96, 271);
             this.txbEmail.Name = "txbEmail";
             this.txbEmail.Size = new System.Drawing.Size(184, 23);
-            this.txbEmail.TabIndex = 52;
+            this.txbEmail.TabIndex = 5;
             // 
             // txbTelefono
             // 
             this.txbTelefono.Location = new System.Drawing.Point(96, 230);
             this.txbTelefono.Name = "txbTelefono";
             this.txbTelefono.Size = new System.Drawing.Size(184, 23);
-            this.txbTelefono.TabIndex = 51;
+            this.txbTelefono.TabIndex = 4;
             // 
             // txbMaterno
             // 
             this.txbMaterno.Location = new System.Drawing.Point(96, 120);
             this.txbMaterno.Name = "txbMaterno";
             this.txbMaterno.Size = new System.Drawing.Size(184, 23);
-            this.txbMaterno.TabIndex = 50;
+            this.txbMaterno.TabIndex = 2;
             // 
             // txbPaterno
             // 
             this.txbPaterno.Location = new System.Drawing.Point(96, 78);
             this.txbPaterno.Name = "txbPaterno";
             this.txbPaterno.Size = new System.Drawing.Size(184, 23);
-            this.txbPaterno.TabIndex = 49;
+            this.txbPaterno.TabIndex = 1;
             // 
             // txbNombre
             // 
             this.txbNombre.Location = new System.Drawing.Point(96, 38);
             this.txbNombre.Name = "txbNombre";
             this.txbNombre.Size = new System.Drawing.Size(184, 23);
-            this.txbNombre.TabIndex = 48;
+            this.txbNombre.TabIndex = 0;
             // 
             // operadorNuevo
             // 
@@ -282,6 +299,7 @@
             this.Controls.Add(this.btnCrear);
             this.Font = new System.Drawing.Font("Calibri", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Name = "operadorNuevo";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Nuevo Operdor";
             this.ResumeLayout(false);
             this.PerformLayout();

@@ -31,7 +31,7 @@
             this.btnNuevo = new System.Windows.Forms.Button();
             this.dgvOperador = new System.Windows.Forms.DataGridView();
             this.button1 = new System.Windows.Forms.Button();
-            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.txbFiltrar = new System.Windows.Forms.TextBox();
             ((System.ComponentModel.ISupportInitialize)(this.dgvOperador)).BeginInit();
             this.SuspendLayout();
             // 
@@ -47,9 +47,12 @@
             // 
             // dgvOperador
             // 
+            this.dgvOperador.AllowUserToAddRows = false;
+            this.dgvOperador.AllowUserToDeleteRows = false;
             this.dgvOperador.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvOperador.Location = new System.Drawing.Point(12, 126);
             this.dgvOperador.Name = "dgvOperador";
+            this.dgvOperador.ReadOnly = true;
             this.dgvOperador.Size = new System.Drawing.Size(660, 223);
             this.dgvOperador.TabIndex = 0;
             this.dgvOperador.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvOperador_CellClick);
@@ -62,20 +65,21 @@
             this.button1.TabIndex = 2;
             this.button1.Text = "Filtrar";
             this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
-            // textBox1
+            // txbFiltrar
             // 
-            this.textBox1.Location = new System.Drawing.Point(12, 84);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(246, 23);
-            this.textBox1.TabIndex = 1;
+            this.txbFiltrar.Location = new System.Drawing.Point(12, 84);
+            this.txbFiltrar.Name = "txbFiltrar";
+            this.txbFiltrar.Size = new System.Drawing.Size(246, 23);
+            this.txbFiltrar.TabIndex = 1;
             // 
             // operadorIndex
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(684, 361);
-            this.Controls.Add(this.textBox1);
+            this.Controls.Add(this.txbFiltrar);
             this.Controls.Add(this.button1);
             this.Controls.Add(this.dgvOperador);
             this.Controls.Add(this.btnNuevo);
@@ -96,6 +100,6 @@
         private System.Windows.Forms.Button btnNuevo;
         private System.Windows.Forms.DataGridView dgvOperador;
         private System.Windows.Forms.Button button1;
-        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.TextBox txbFiltrar;
     }
 }

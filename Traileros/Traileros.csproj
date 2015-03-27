@@ -123,6 +123,7 @@
     </Compile>
     <Compile Include="Clases\Validar.cs" />
     <Compile Include="Clases\Vacio.cs" />
+    <Compile Include="Clases\Variables.cs" />
     <EmbeddedResource Include="Forms\Operadores\operadorEditar.resx">
       <DependentUpon>operadorEditar.cs</DependentUpon>
     </EmbeddedResource>
