@@ -77,7 +77,7 @@
             // label11
             // 
             this.label11.AutoSize = true;
-            this.label11.Location = new System.Drawing.Point(37, 314);
+            this.label11.Location = new System.Drawing.Point(37, 303);
             this.label11.Name = "label11";
             this.label11.Size = new System.Drawing.Size(55, 15);
             this.label11.TabIndex = 69;
@@ -85,7 +85,7 @@
             // 
             // txbLicencia
             // 
-            this.txbLicencia.Location = new System.Drawing.Point(96, 311);
+            this.txbLicencia.Location = new System.Drawing.Point(96, 300);
             this.txbLicencia.Name = "txbLicencia";
             this.txbLicencia.Size = new System.Drawing.Size(184, 23);
             this.txbLicencia.TabIndex = 6;
@@ -191,7 +191,7 @@
             // label5
             // 
             this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(48, 274);
+            this.label5.Location = new System.Drawing.Point(48, 263);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(42, 15);
             this.label5.TabIndex = 57;
@@ -200,7 +200,7 @@
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(34, 233);
+            this.label4.Location = new System.Drawing.Point(34, 222);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(56, 15);
             this.label4.TabIndex = 56;
@@ -235,14 +235,14 @@
             // 
             // txbEmail
             // 
-            this.txbEmail.Location = new System.Drawing.Point(96, 271);
+            this.txbEmail.Location = new System.Drawing.Point(96, 260);
             this.txbEmail.Name = "txbEmail";
             this.txbEmail.Size = new System.Drawing.Size(184, 23);
             this.txbEmail.TabIndex = 5;
             // 
             // txbTelefono
             // 
-            this.txbTelefono.Location = new System.Drawing.Point(96, 230);
+            this.txbTelefono.Location = new System.Drawing.Point(96, 219);
             this.txbTelefono.Name = "txbTelefono";
             this.txbTelefono.Size = new System.Drawing.Size(184, 23);
             this.txbTelefono.TabIndex = 4;

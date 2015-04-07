@@ -172,7 +172,7 @@
             // 
             // btnLimpiar
             // 
-            this.btnLimpiar.Location = new System.Drawing.Point(389, 295);
+            this.btnLimpiar.Location = new System.Drawing.Point(389, 296);
             this.btnLimpiar.Name = "btnLimpiar";
             this.btnLimpiar.Size = new System.Drawing.Size(100, 35);
             this.btnLimpiar.TabIndex = 37;
@@ -181,7 +181,7 @@
             // 
             // btnCrear
             // 
-            this.btnCrear.Location = new System.Drawing.Point(527, 295);
+            this.btnCrear.Location = new System.Drawing.Point(527, 296);
             this.btnCrear.Name = "btnCrear";
             this.btnCrear.Size = new System.Drawing.Size(100, 35);
             this.btnCrear.TabIndex = 36;

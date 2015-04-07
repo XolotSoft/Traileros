@@ -36,6 +36,15 @@
             this.operadorToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.vehículosToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.statusStrip1 = new System.Windows.Forms.StatusStrip();
+            this.nuevoToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.buscarToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.nuevoToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
+            this.buscarToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
+            this.nuevoToolStripMenuItem2 = new System.Windows.Forms.ToolStripMenuItem();
+            this.buscarToolStripMenuItem2 = new System.Windows.Forms.ToolStripMenuItem();
+            this.entregasToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.nuevaToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.buscarToolStripMenuItem3 = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -45,7 +54,8 @@
             this.inicioToolStripMenuItem,
             this.usuarioToolStripMenuItem,
             this.operadorToolStripMenuItem,
-            this.vehículosToolStripMenuItem});
+            this.vehículosToolStripMenuItem,
+            this.entregasToolStripMenuItem});
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
             this.menuStrip1.Padding = new System.Windows.Forms.Padding(7, 2, 0, 2);
@@ -65,18 +75,21 @@
             // cerrarSesiónToolStripMenuItem
             // 
             this.cerrarSesiónToolStripMenuItem.Name = "cerrarSesiónToolStripMenuItem";
-            this.cerrarSesiónToolStripMenuItem.Size = new System.Drawing.Size(143, 22);
+            this.cerrarSesiónToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
             this.cerrarSesiónToolStripMenuItem.Text = "Cerrar Sesión";
             // 
             // salirToolStripMenuItem
             // 
             this.salirToolStripMenuItem.Name = "salirToolStripMenuItem";
-            this.salirToolStripMenuItem.Size = new System.Drawing.Size(143, 22);
+            this.salirToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
             this.salirToolStripMenuItem.Text = "Salir";
             this.salirToolStripMenuItem.Click += new System.EventHandler(this.salirToolStripMenuItem_Click);
             // 
             // usuarioToolStripMenuItem
             // 
+            this.usuarioToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.nuevoToolStripMenuItem,
+            this.buscarToolStripMenuItem});
             this.usuarioToolStripMenuItem.Name = "usuarioToolStripMenuItem";
             this.usuarioToolStripMenuItem.Size = new System.Drawing.Size(64, 20);
             this.usuarioToolStripMenuItem.Text = "Usuarios";
@@ -84,6 +97,9 @@
             // 
             // operadorToolStripMenuItem
             // 
+            this.operadorToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.nuevoToolStripMenuItem1,
+            this.buscarToolStripMenuItem1});
             this.operadorToolStripMenuItem.Name = "operadorToolStripMenuItem";
             this.operadorToolStripMenuItem.Size = new System.Drawing.Size(80, 20);
             this.operadorToolStripMenuItem.Text = "Operadores";
@@ -91,6 +107,9 @@
             // 
             // vehículosToolStripMenuItem
             // 
+            this.vehículosToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.nuevoToolStripMenuItem2,
+            this.buscarToolStripMenuItem2});
             this.vehículosToolStripMenuItem.Name = "vehículosToolStripMenuItem";
             this.vehículosToolStripMenuItem.Size = new System.Drawing.Size(70, 20);
             this.vehículosToolStripMenuItem.Text = "Vehículos";
@@ -103,6 +122,63 @@
             this.statusStrip1.Size = new System.Drawing.Size(980, 22);
             this.statusStrip1.TabIndex = 2;
             this.statusStrip1.Text = "statusStrip1";
+            // 
+            // nuevoToolStripMenuItem
+            // 
+            this.nuevoToolStripMenuItem.Name = "nuevoToolStripMenuItem";
+            this.nuevoToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
+            this.nuevoToolStripMenuItem.Text = "Nuevo";
+            // 
+            // buscarToolStripMenuItem
+            // 
+            this.buscarToolStripMenuItem.Name = "buscarToolStripMenuItem";
+            this.buscarToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
+            this.buscarToolStripMenuItem.Text = "Buscar";
+            // 
+            // nuevoToolStripMenuItem1
+            // 
+            this.nuevoToolStripMenuItem1.Name = "nuevoToolStripMenuItem1";
+            this.nuevoToolStripMenuItem1.Size = new System.Drawing.Size(152, 22);
+            this.nuevoToolStripMenuItem1.Text = "Nuevo";
+            // 
+            // buscarToolStripMenuItem1
+            // 
+            this.buscarToolStripMenuItem1.Name = "buscarToolStripMenuItem1";
+            this.buscarToolStripMenuItem1.Size = new System.Drawing.Size(152, 22);
+            this.buscarToolStripMenuItem1.Text = "Buscar";
+            // 
+            // nuevoToolStripMenuItem2
+            // 
+            this.nuevoToolStripMenuItem2.Name = "nuevoToolStripMenuItem2";
+            this.nuevoToolStripMenuItem2.Size = new System.Drawing.Size(152, 22);
+            this.nuevoToolStripMenuItem2.Text = "Nuevo";
+            // 
+            // buscarToolStripMenuItem2
+            // 
+            this.buscarToolStripMenuItem2.Name = "buscarToolStripMenuItem2";
+            this.buscarToolStripMenuItem2.Size = new System.Drawing.Size(152, 22);
+            this.buscarToolStripMenuItem2.Text = "Buscar";
+            // 
+            // entregasToolStripMenuItem
+            // 
+            this.entregasToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.nuevaToolStripMenuItem,
+            this.buscarToolStripMenuItem3});
+            this.entregasToolStripMenuItem.Name = "entregasToolStripMenuItem";
+            this.entregasToolStripMenuItem.Size = new System.Drawing.Size(64, 20);
+            this.entregasToolStripMenuItem.Text = "Entregas";
+            // 
+            // nuevaToolStripMenuItem
+            // 
+            this.nuevaToolStripMenuItem.Name = "nuevaToolStripMenuItem";
+            this.nuevaToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
+            this.nuevaToolStripMenuItem.Text = "Nueva";
+            // 
+            // buscarToolStripMenuItem3
+            // 
+            this.buscarToolStripMenuItem3.Name = "buscarToolStripMenuItem3";
+            this.buscarToolStripMenuItem3.Size = new System.Drawing.Size(152, 22);
+            this.buscarToolStripMenuItem3.Text = "Buscar";
             // 
             // MDI
             // 
@@ -135,6 +211,15 @@
         private System.Windows.Forms.ToolStripMenuItem cerrarSesiónToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem salirToolStripMenuItem;
         private System.Windows.Forms.StatusStrip statusStrip1;
+        private System.Windows.Forms.ToolStripMenuItem nuevoToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem buscarToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem nuevoToolStripMenuItem1;
+        private System.Windows.Forms.ToolStripMenuItem buscarToolStripMenuItem1;
+        private System.Windows.Forms.ToolStripMenuItem nuevoToolStripMenuItem2;
+        private System.Windows.Forms.ToolStripMenuItem buscarToolStripMenuItem2;
+        private System.Windows.Forms.ToolStripMenuItem entregasToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem nuevaToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem buscarToolStripMenuItem3;
 
     }
 }
