@@ -4,8 +4,10 @@ USE trailers
 GO
 CREATE TABLE usuarios(
 id int IDENTITY PRIMARY KEY NOT NULL,
+nombre varchar(255),
 username varchar(255),
-password varchar(255));
+password varchar(255),
+rol varchar(255));
 GO
 CREATE TABLE operadores(
 id int IDENTITY PRIMARY KEY NOT NULL,

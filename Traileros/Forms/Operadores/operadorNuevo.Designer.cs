@@ -28,11 +28,11 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(operadorNuevo));
             this.btnCrear = new System.Windows.Forms.Button();
             this.btnLimpiar = new System.Windows.Forms.Button();
             this.label11 = new System.Windows.Forms.Label();
             this.txbLicencia = new System.Windows.Forms.TextBox();
-            this.cmbDelegacion = new System.Windows.Forms.ComboBox();
             this.label10 = new System.Windows.Forms.Label();
             this.label9 = new System.Windows.Forms.Label();
             this.txbColonia = new System.Windows.Forms.TextBox();
@@ -52,11 +52,13 @@
             this.txbMaterno = new System.Windows.Forms.TextBox();
             this.txbPaterno = new System.Windows.Forms.TextBox();
             this.txbNombre = new System.Windows.Forms.TextBox();
+            this.btnRegresar = new System.Windows.Forms.Button();
+            this.txbDelegacion = new System.Windows.Forms.TextBox();
             this.SuspendLayout();
             // 
             // btnCrear
             // 
-            this.btnCrear.Location = new System.Drawing.Point(545, 293);
+            this.btnCrear.Location = new System.Drawing.Point(572, 314);
             this.btnCrear.Name = "btnCrear";
             this.btnCrear.Size = new System.Drawing.Size(100, 35);
             this.btnCrear.TabIndex = 11;
@@ -66,10 +68,10 @@
             // 
             // btnLimpiar
             // 
-            this.btnLimpiar.Location = new System.Drawing.Point(407, 293);
+            this.btnLimpiar.Location = new System.Drawing.Point(466, 314);
             this.btnLimpiar.Name = "btnLimpiar";
             this.btnLimpiar.Size = new System.Drawing.Size(100, 35);
-            this.btnLimpiar.TabIndex = 12;
+            this.btnLimpiar.TabIndex = 13;
             this.btnLimpiar.Text = "Limpiar";
             this.btnLimpiar.UseVisualStyleBackColor = true;
             this.btnLimpiar.Click += new System.EventHandler(this.btnLimpiar_Click);
@@ -89,31 +91,6 @@
             this.txbLicencia.Name = "txbLicencia";
             this.txbLicencia.Size = new System.Drawing.Size(184, 23);
             this.txbLicencia.TabIndex = 6;
-            // 
-            // cmbDelegacion
-            // 
-            this.cmbDelegacion.FormattingEnabled = true;
-            this.cmbDelegacion.Items.AddRange(new object[] {
-            "Álvaro Obregón",
-            "Azcapotzalco",
-            "Benito Juárez",
-            "Coyoacán",
-            "Cuajimalpa de Morelos",
-            "Cuauhtémoc",
-            "Gustavo A. Madero",
-            "Iztacalco",
-            "Iztapalapa",
-            "La Magdalena Contreras",
-            "Miguel Hidalgo",
-            "Milpa Alta",
-            "Tláhuac",
-            "Tlalpan",
-            "Venustiano Carranza",
-            "Xochimilco"});
-            this.cmbDelegacion.Location = new System.Drawing.Point(455, 157);
-            this.cmbDelegacion.Name = "cmbDelegacion";
-            this.cmbDelegacion.Size = new System.Drawing.Size(184, 23);
-            this.cmbDelegacion.TabIndex = 10;
             // 
             // label10
             // 
@@ -268,14 +245,31 @@
             this.txbNombre.Size = new System.Drawing.Size(184, 23);
             this.txbNombre.TabIndex = 0;
             // 
+            // btnRegresar
+            // 
+            this.btnRegresar.Location = new System.Drawing.Point(360, 314);
+            this.btnRegresar.Name = "btnRegresar";
+            this.btnRegresar.Size = new System.Drawing.Size(100, 35);
+            this.btnRegresar.TabIndex = 70;
+            this.btnRegresar.Text = "Regresar";
+            this.btnRegresar.UseVisualStyleBackColor = true;
+            // 
+            // txbDelegacion
+            // 
+            this.txbDelegacion.Location = new System.Drawing.Point(455, 157);
+            this.txbDelegacion.Name = "txbDelegacion";
+            this.txbDelegacion.Size = new System.Drawing.Size(183, 23);
+            this.txbDelegacion.TabIndex = 10;
+            // 
             // operadorNuevo
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(684, 361);
+            this.Controls.Add(this.txbDelegacion);
+            this.Controls.Add(this.btnRegresar);
             this.Controls.Add(this.label11);
             this.Controls.Add(this.txbLicencia);
-            this.Controls.Add(this.cmbDelegacion);
             this.Controls.Add(this.label10);
             this.Controls.Add(this.label9);
             this.Controls.Add(this.txbColonia);
@@ -298,9 +292,10 @@
             this.Controls.Add(this.btnLimpiar);
             this.Controls.Add(this.btnCrear);
             this.Font = new System.Drawing.Font("Calibri", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "operadorNuevo";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "Nuevo Operdor";
+            this.Text = "Nuevo Operador";
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -312,7 +307,6 @@
         private System.Windows.Forms.Button btnLimpiar;
         private System.Windows.Forms.Label label11;
         private System.Windows.Forms.TextBox txbLicencia;
-        private System.Windows.Forms.ComboBox cmbDelegacion;
         private System.Windows.Forms.Label label10;
         private System.Windows.Forms.Label label9;
         private System.Windows.Forms.TextBox txbColonia;
@@ -332,6 +326,8 @@
         private System.Windows.Forms.TextBox txbMaterno;
         private System.Windows.Forms.TextBox txbPaterno;
         private System.Windows.Forms.TextBox txbNombre;
+        private System.Windows.Forms.Button btnRegresar;
+        private System.Windows.Forms.TextBox txbDelegacion;
 
     }
 }

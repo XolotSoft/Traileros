@@ -35,12 +35,12 @@ namespace Traileros
 
         private void operadorIndex_Load(object sender, EventArgs e)
         {
-            bd.buscar("SELECT id AS ID, nombre AS Nombre, paterno AS Paterno, materno AS Materno, licencia AS Licencia FROM operadores");
-            
+            bd.buscar("SELECT id, nombre AS Nombre, paterno AS Paterno, materno AS Materno, licencia AS Licencia FROM operadores");
             dgvOperador.SelectionMode = DataGridViewSelectionMode.FullRowSelect;
             dgvOperador.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
             dgvOperador.RowHeadersVisible = false;
-            dgvOperador.DataSource = bd.ds.Tables[0];  
+            dgvOperador.DataSource = bd.ds.Tables[0];
+            dgvOperador.Columns["id"].Visible = false;
         }
 
         private void btnNuevo_Click(object sender, EventArgs e)

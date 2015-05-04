@@ -28,40 +28,31 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.btnNuevo = new System.Windows.Forms.Button();
             this.dgvOperador = new System.Windows.Forms.DataGridView();
             this.button1 = new System.Windows.Forms.Button();
             this.txbFiltrar = new System.Windows.Forms.TextBox();
-            this.button2 = new System.Windows.Forms.Button();
-            this.button3 = new System.Windows.Forms.Button();
+            this.btnNuevo = new System.Windows.Forms.Button();
+            this.label1 = new System.Windows.Forms.Label();
+            this.label2 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.dgvOperador)).BeginInit();
             this.SuspendLayout();
-            // 
-            // btnNuevo
-            // 
-            this.btnNuevo.Location = new System.Drawing.Point(313, 313);
-            this.btnNuevo.Name = "btnNuevo";
-            this.btnNuevo.Size = new System.Drawing.Size(100, 35);
-            this.btnNuevo.TabIndex = 3;
-            this.btnNuevo.Text = "Nuevo";
-            this.btnNuevo.UseVisualStyleBackColor = true;
-            this.btnNuevo.Click += new System.EventHandler(this.btnNuevo_Click);
             // 
             // dgvOperador
             // 
             this.dgvOperador.AllowUserToAddRows = false;
             this.dgvOperador.AllowUserToDeleteRows = false;
+            this.dgvOperador.BackgroundColor = System.Drawing.SystemColors.ButtonFace;
             this.dgvOperador.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgvOperador.Location = new System.Drawing.Point(12, 90);
+            this.dgvOperador.Location = new System.Drawing.Point(12, 106);
             this.dgvOperador.Name = "dgvOperador";
             this.dgvOperador.ReadOnly = true;
-            this.dgvOperador.Size = new System.Drawing.Size(660, 204);
+            this.dgvOperador.Size = new System.Drawing.Size(660, 243);
             this.dgvOperador.TabIndex = 0;
             this.dgvOperador.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvOperador_CellClick);
             // 
             // button1
             // 
-            this.button1.Location = new System.Drawing.Point(424, 36);
+            this.button1.Location = new System.Drawing.Point(274, 36);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(100, 35);
             this.button1.TabIndex = 2;
@@ -71,36 +62,46 @@
             // 
             // txbFiltrar
             // 
-            this.txbFiltrar.Location = new System.Drawing.Point(160, 43);
+            this.txbFiltrar.Location = new System.Drawing.Point(10, 43);
             this.txbFiltrar.Name = "txbFiltrar";
             this.txbFiltrar.Size = new System.Drawing.Size(246, 23);
             this.txbFiltrar.TabIndex = 1;
             // 
-            // button2
+            // btnNuevo
             // 
-            this.button2.Location = new System.Drawing.Point(566, 313);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(100, 35);
-            this.button2.TabIndex = 4;
-            this.button2.Text = "Eliminar";
-            this.button2.UseVisualStyleBackColor = true;
+            this.btnNuevo.Location = new System.Drawing.Point(572, 36);
+            this.btnNuevo.Name = "btnNuevo";
+            this.btnNuevo.Size = new System.Drawing.Size(100, 35);
+            this.btnNuevo.TabIndex = 3;
+            this.btnNuevo.Text = "Nuevo";
+            this.btnNuevo.UseVisualStyleBackColor = true;
+            this.btnNuevo.Click += new System.EventHandler(this.btnNuevo_Click);
             // 
-            // button3
+            // label1
             // 
-            this.button3.Location = new System.Drawing.Point(439, 313);
-            this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(100, 35);
-            this.button3.TabIndex = 5;
-            this.button3.Text = "Editar";
-            this.button3.UseVisualStyleBackColor = true;
+            this.label1.AutoSize = true;
+            this.label1.Location = new System.Drawing.Point(10, 88);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(140, 15);
+            this.label1.TabIndex = 4;
+            this.label1.Text = "Catálogo de Operadores";
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Location = new System.Drawing.Point(465, 88);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(207, 15);
+            this.label2.TabIndex = 5;
+            this.label2.Text = "Seleciona un operador para editarlo";
             // 
             // operadorIndex
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(684, 361);
-            this.Controls.Add(this.button3);
-            this.Controls.Add(this.button2);
+            this.Controls.Add(this.label2);
+            this.Controls.Add(this.label1);
             this.Controls.Add(this.txbFiltrar);
             this.Controls.Add(this.button1);
             this.Controls.Add(this.dgvOperador);
@@ -119,11 +120,11 @@
 
         #endregion
 
-        private System.Windows.Forms.Button btnNuevo;
         private System.Windows.Forms.DataGridView dgvOperador;
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.TextBox txbFiltrar;
-        private System.Windows.Forms.Button button2;
-        private System.Windows.Forms.Button button3;
+        private System.Windows.Forms.Button btnNuevo;
+        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Label label2;
     }
 }

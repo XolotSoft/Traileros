@@ -38,7 +38,7 @@ namespace Traileros
         private void btnCrear_Click(object sender, EventArgs e)
         {
             string sql = "INSERT INTO operadores(nombre,paterno,materno,nacimiento,calle,numero,colonia,delegacion,telefono,email,licencia) VALUES ('"+
-                txbNombre.Text+"','"+txbPaterno.Text+"','"+txbMaterno.Text+"','"+dtpNacimiento.Text+"','"+txbCalle.Text+"','"+txbNumero.Text+"','"+txbColonia.Text+"','"+cmbDelegacion.Text+"','"+txbTelefono.Text+"','"+txbEmail.Text+"','"+txbLicencia.Text+"')";
+                txbNombre.Text+"','"+txbPaterno.Text+"','"+txbMaterno.Text+"','"+dtpNacimiento.Text+"','"+txbCalle.Text+"','"+txbNumero.Text+"','"+txbColonia.Text+"','"+txbDelegacion.Text+"','"+txbTelefono.Text+"','"+txbEmail.Text+"','"+txbLicencia.Text+"')";
             if (bd.insertar(sql))
             {
                 MessageBox.Show("Se ha agregado correctamente el operador", "Correcto",
@@ -58,7 +58,7 @@ namespace Traileros
 
         private void btnLimpiar_Click(object sender, EventArgs e)
         {
-            Limpiar.txb(this);
+            Limpiar.todo(this);
         }
     }
 }

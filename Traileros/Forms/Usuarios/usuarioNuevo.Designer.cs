@@ -28,32 +28,39 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.comboBox1 = new System.Windows.Forms.ComboBox();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(usuarioNuevo));
+            this.cmbRol = new System.Windows.Forms.ComboBox();
             this.label10 = new System.Windows.Forms.Label();
             this.label7 = new System.Windows.Forms.Label();
-            this.textBox6 = new System.Windows.Forms.TextBox();
+            this.txbUsuario = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
-            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.txbNombre = new System.Windows.Forms.TextBox();
             this.btnLimpiar = new System.Windows.Forms.Button();
             this.btnCrear = new System.Windows.Forms.Button();
             this.label2 = new System.Windows.Forms.Label();
-            this.textBox2 = new System.Windows.Forms.TextBox();
+            this.txbConfirmar = new System.Windows.Forms.TextBox();
             this.label3 = new System.Windows.Forms.Label();
-            this.textBox3 = new System.Windows.Forms.TextBox();
+            this.txbPass = new System.Windows.Forms.TextBox();
+            this.btnRegresar = new System.Windows.Forms.Button();
+            this.label4 = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
-            // comboBox1
+            // cmbRol
             // 
-            this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.Location = new System.Drawing.Point(156, 213);
-            this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(133, 23);
-            this.comboBox1.TabIndex = 73;
+            this.cmbRol.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cmbRol.FormattingEnabled = true;
+            this.cmbRol.Items.AddRange(new object[] {
+            "Administrador",
+            "Usuario"});
+            this.cmbRol.Location = new System.Drawing.Point(319, 212);
+            this.cmbRol.Name = "cmbRol";
+            this.cmbRol.Size = new System.Drawing.Size(133, 23);
+            this.cmbRol.TabIndex = 5;
             // 
             // label10
             // 
             this.label10.AutoSize = true;
-            this.label10.Location = new System.Drawing.Point(125, 216);
+            this.label10.Location = new System.Drawing.Point(288, 215);
             this.label10.Name = "label10";
             this.label10.Size = new System.Drawing.Size(28, 15);
             this.label10.TabIndex = 72;
@@ -62,105 +69,136 @@
             // label7
             // 
             this.label7.AutoSize = true;
-            this.label7.Location = new System.Drawing.Point(97, 72);
+            this.label7.Location = new System.Drawing.Point(19, 147);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(54, 15);
             this.label7.TabIndex = 71;
             this.label7.Text = "Usuario:";
             // 
-            // textBox6
+            // txbUsuario
             // 
-            this.textBox6.Location = new System.Drawing.Point(156, 69);
-            this.textBox6.Name = "textBox6";
-            this.textBox6.Size = new System.Drawing.Size(133, 23);
-            this.textBox6.TabIndex = 70;
+            this.txbUsuario.Location = new System.Drawing.Point(79, 144);
+            this.txbUsuario.Name = "txbUsuario";
+            this.txbUsuario.Size = new System.Drawing.Size(133, 23);
+            this.txbUsuario.TabIndex = 2;
+            this.txbUsuario.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txbUsuario_KeyPress);
             // 
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(97, 22);
+            this.label1.Location = new System.Drawing.Point(20, 78);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(53, 15);
             this.label1.TabIndex = 69;
             this.label1.Text = "Nombre:";
             // 
-            // textBox1
+            // txbNombre
             // 
-            this.textBox1.Location = new System.Drawing.Point(156, 19);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(133, 23);
-            this.textBox1.TabIndex = 68;
+            this.txbNombre.Location = new System.Drawing.Point(79, 75);
+            this.txbNombre.Name = "txbNombre";
+            this.txbNombre.Size = new System.Drawing.Size(133, 23);
+            this.txbNombre.TabIndex = 1;
+            this.txbNombre.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txbNombre_KeyPress);
             // 
             // btnLimpiar
             // 
-            this.btnLimpiar.Location = new System.Drawing.Point(75, 256);
+            this.btnLimpiar.Location = new System.Drawing.Point(266, 294);
             this.btnLimpiar.Name = "btnLimpiar";
             this.btnLimpiar.Size = new System.Drawing.Size(100, 35);
-            this.btnLimpiar.TabIndex = 75;
+            this.btnLimpiar.TabIndex = 8;
             this.btnLimpiar.Text = "Limpiar";
             this.btnLimpiar.UseVisualStyleBackColor = true;
+            this.btnLimpiar.Click += new System.EventHandler(this.btnLimpiar_Click);
             // 
             // btnCrear
             // 
-            this.btnCrear.Location = new System.Drawing.Point(213, 256);
+            this.btnCrear.Location = new System.Drawing.Point(372, 294);
             this.btnCrear.Name = "btnCrear";
             this.btnCrear.Size = new System.Drawing.Size(100, 35);
-            this.btnCrear.TabIndex = 74;
+            this.btnCrear.TabIndex = 6;
             this.btnCrear.Text = "Crear";
             this.btnCrear.UseVisualStyleBackColor = true;
+            this.btnCrear.Click += new System.EventHandler(this.btnCrear_Click);
             // 
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(23, 168);
+            this.label2.Location = new System.Drawing.Point(248, 147);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(130, 15);
+            this.label2.Size = new System.Drawing.Size(65, 15);
             this.label2.TabIndex = 79;
-            this.label2.Text = "Confirmar contraseña:";
+            this.label2.Text = "Confirmar:";
             // 
-            // textBox2
+            // txbConfirmar
             // 
-            this.textBox2.Location = new System.Drawing.Point(156, 165);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(133, 23);
-            this.textBox2.TabIndex = 78;
+            this.txbConfirmar.Location = new System.Drawing.Point(319, 144);
+            this.txbConfirmar.Name = "txbConfirmar";
+            this.txbConfirmar.PasswordChar = '*';
+            this.txbConfirmar.Size = new System.Drawing.Size(133, 23);
+            this.txbConfirmar.TabIndex = 4;
+            this.txbConfirmar.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txbConfirmar_KeyPress);
             // 
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(81, 118);
+            this.label3.Location = new System.Drawing.Point(244, 78);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(73, 15);
             this.label3.TabIndex = 77;
             this.label3.Text = "Contraseña:";
             // 
-            // textBox3
+            // txbPass
             // 
-            this.textBox3.Location = new System.Drawing.Point(156, 115);
-            this.textBox3.Name = "textBox3";
-            this.textBox3.Size = new System.Drawing.Size(133, 23);
-            this.textBox3.TabIndex = 76;
+            this.txbPass.Location = new System.Drawing.Point(319, 75);
+            this.txbPass.Name = "txbPass";
+            this.txbPass.PasswordChar = '*';
+            this.txbPass.Size = new System.Drawing.Size(133, 23);
+            this.txbPass.TabIndex = 3;
+            this.txbPass.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txbPass_KeyPress);
+            // 
+            // btnRegresar
+            // 
+            this.btnRegresar.Location = new System.Drawing.Point(160, 294);
+            this.btnRegresar.Name = "btnRegresar";
+            this.btnRegresar.Size = new System.Drawing.Size(100, 35);
+            this.btnRegresar.TabIndex = 80;
+            this.btnRegresar.Text = "Regresar";
+            this.btnRegresar.UseVisualStyleBackColor = true;
+            this.btnRegresar.Click += new System.EventHandler(this.btnRegresar_Click);
+            // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.Location = new System.Drawing.Point(13, 13);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(278, 15);
+            this.label4.TabIndex = 81;
+            this.label4.Text = "Llena todos los datos que acontinuacion se piden";
             // 
             // usuarioNuevo
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(384, 311);
+            this.ClientSize = new System.Drawing.Size(484, 341);
+            this.Controls.Add(this.label4);
+            this.Controls.Add(this.btnRegresar);
             this.Controls.Add(this.label2);
-            this.Controls.Add(this.textBox2);
+            this.Controls.Add(this.txbConfirmar);
             this.Controls.Add(this.label3);
-            this.Controls.Add(this.textBox3);
+            this.Controls.Add(this.txbPass);
             this.Controls.Add(this.btnLimpiar);
             this.Controls.Add(this.btnCrear);
-            this.Controls.Add(this.comboBox1);
+            this.Controls.Add(this.cmbRol);
             this.Controls.Add(this.label10);
             this.Controls.Add(this.label7);
-            this.Controls.Add(this.textBox6);
+            this.Controls.Add(this.txbUsuario);
             this.Controls.Add(this.label1);
-            this.Controls.Add(this.textBox1);
+            this.Controls.Add(this.txbNombre);
             this.Font = new System.Drawing.Font("Calibri", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "usuarioNuevo";
-            this.Text = "usuarioNuevo";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
+            this.Text = "Nuevo Usuario";
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -168,17 +206,19 @@
 
         #endregion
 
-        private System.Windows.Forms.ComboBox comboBox1;
+        private System.Windows.Forms.ComboBox cmbRol;
         private System.Windows.Forms.Label label10;
         private System.Windows.Forms.Label label7;
-        private System.Windows.Forms.TextBox textBox6;
+        private System.Windows.Forms.TextBox txbUsuario;
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.TextBox txbNombre;
         private System.Windows.Forms.Button btnLimpiar;
         private System.Windows.Forms.Button btnCrear;
         private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.TextBox textBox2;
+        private System.Windows.Forms.TextBox txbConfirmar;
         private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.TextBox textBox3;
+        private System.Windows.Forms.TextBox txbPass;
+        private System.Windows.Forms.Button btnRegresar;
+        private System.Windows.Forms.Label label4;
     }
 }
