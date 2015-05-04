@@ -94,9 +94,12 @@
             // 
             // pcbLogin
             // 
+            this.pcbLogin.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.pcbLogin.Image = global::Traileros.Properties.Resources.key;
             this.pcbLogin.Location = new System.Drawing.Point(97, 33);
             this.pcbLogin.Name = "pcbLogin";
             this.pcbLogin.Size = new System.Drawing.Size(93, 106);
+            this.pcbLogin.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pcbLogin.TabIndex = 6;
             this.pcbLogin.TabStop = false;
             // 

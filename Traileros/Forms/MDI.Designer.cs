@@ -36,6 +36,8 @@
             this.operadorToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.vehículosToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.statusStrip1 = new System.Windows.Forms.StatusStrip();
+            this.nuevoToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.catálogoToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -84,6 +86,9 @@
             // 
             // operadorToolStripMenuItem
             // 
+            this.operadorToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.nuevoToolStripMenuItem,
+            this.catálogoToolStripMenuItem});
             this.operadorToolStripMenuItem.Name = "operadorToolStripMenuItem";
             this.operadorToolStripMenuItem.Size = new System.Drawing.Size(80, 20);
             this.operadorToolStripMenuItem.Text = "Operadores";
@@ -103,6 +108,20 @@
             this.statusStrip1.Size = new System.Drawing.Size(980, 22);
             this.statusStrip1.TabIndex = 2;
             this.statusStrip1.Text = "statusStrip1";
+            // 
+            // nuevoToolStripMenuItem
+            // 
+            this.nuevoToolStripMenuItem.Name = "nuevoToolStripMenuItem";
+            this.nuevoToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
+            this.nuevoToolStripMenuItem.Text = "Nuevo";
+            this.nuevoToolStripMenuItem.Click += new System.EventHandler(this.nuevoToolStripMenuItem_Click);
+            // 
+            // catálogoToolStripMenuItem
+            // 
+            this.catálogoToolStripMenuItem.Name = "catálogoToolStripMenuItem";
+            this.catálogoToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
+            this.catálogoToolStripMenuItem.Text = "Catálogo";
+            this.catálogoToolStripMenuItem.Click += new System.EventHandler(this.catálogoToolStripMenuItem_Click);
             // 
             // MDI
             // 
@@ -135,6 +154,8 @@
         private System.Windows.Forms.ToolStripMenuItem cerrarSesiónToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem salirToolStripMenuItem;
         private System.Windows.Forms.StatusStrip statusStrip1;
+        private System.Windows.Forms.ToolStripMenuItem nuevoToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem catálogoToolStripMenuItem;
 
     }
 }

@@ -24,12 +24,7 @@ namespace Traileros
 
         private void operadorToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            operadorIndex index = null;
-            index = operadorIndex.Instancia();
-            index.MdiParent = this;
-            index.Show();
-            Form frm = this.MdiChildren.FirstOrDefault(x => x is operadorEditar || x is operadorNuevo);
-            if (frm != null) frm.Close();
+
         }
 
         private void usuarioToolStripMenuItem_Click(object sender, EventArgs e)
@@ -49,6 +44,26 @@ namespace Traileros
         private void salirToolStripMenuItem_Click(object sender, EventArgs e)
         {
             Application.Exit();
+        }
+
+        private void catálogoToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            operadorIndex index = null;
+            index = operadorIndex.Instancia();
+            index.MdiParent = this;
+            index.Show();
+            Form frm = this.MdiChildren.FirstOrDefault(x => x is operadorEditar || x is operadorNuevo);
+            if (frm != null) frm.Close();
+        }
+
+        private void nuevoToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            operadorNuevo nuevo = null;
+            nuevo = operadorNuevo.Instancia();
+            nuevo.MdiParent = this;
+            nuevo.Show();
+            Form frm = this.MdiChildren.FirstOrDefault(x => x is operadorIndex || x is operadorEditar);
+            if (frm != null) frm.Close();
         }
     }
 }
