@@ -80,7 +80,7 @@
             this.btnLimpiar.Name = "btnLimpiar";
             this.btnLimpiar.Size = new System.Drawing.Size(100, 35);
             this.btnLimpiar.TabIndex = 87;
-            this.btnLimpiar.Text = "Limpiar";
+            this.btnLimpiar.Text = "Eliminar";
             this.btnLimpiar.UseVisualStyleBackColor = true;
             // 
             // btnCrear
@@ -89,7 +89,7 @@
             this.btnCrear.Name = "btnCrear";
             this.btnCrear.Size = new System.Drawing.Size(100, 35);
             this.btnCrear.TabIndex = 86;
-            this.btnCrear.Text = "Crear";
+            this.btnCrear.Text = "Modificar";
             this.btnCrear.UseVisualStyleBackColor = true;
             // 
             // comboBox1
