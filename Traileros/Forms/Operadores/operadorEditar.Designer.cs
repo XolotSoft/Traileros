@@ -28,9 +28,9 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(operadorEditar));
             this.label11 = new System.Windows.Forms.Label();
             this.txbLicencia = new System.Windows.Forms.TextBox();
-            this.cmbDelegacion = new System.Windows.Forms.ComboBox();
             this.label10 = new System.Windows.Forms.Label();
             this.label9 = new System.Windows.Forms.Label();
             this.txbColonia = new System.Windows.Forms.TextBox();
@@ -52,6 +52,8 @@
             this.txbNombre = new System.Windows.Forms.TextBox();
             this.btnLimpiar = new System.Windows.Forms.Button();
             this.btnCrear = new System.Windows.Forms.Button();
+            this.btnRegresar = new System.Windows.Forms.Button();
+            this.txbDelegacion = new System.Windows.Forms.TextBox();
             this.SuspendLayout();
             // 
             // label11
@@ -66,34 +68,10 @@
             // txbLicencia
             // 
             this.txbLicencia.Location = new System.Drawing.Point(107, 297);
+            this.txbLicencia.MaxLength = 15;
             this.txbLicencia.Name = "txbLicencia";
             this.txbLicencia.Size = new System.Drawing.Size(184, 23);
             this.txbLicencia.TabIndex = 76;
-            // 
-            // cmbDelegacion
-            // 
-            this.cmbDelegacion.FormattingEnabled = true;
-            this.cmbDelegacion.Items.AddRange(new object[] {
-            "Álvaro Obregón",
-            "Azcapotzalco",
-            "Benito Juárez",
-            "Coyoacán",
-            "Cuajimalpa de Morelos",
-            "Cuauhtémoc",
-            "Gustavo A. Madero",
-            "Iztacalco",
-            "Iztapalapa",
-            "La Magdalena Contreras",
-            "Miguel Hidalgo",
-            "Milpa Alta",
-            "Tláhuac",
-            "Tlalpan",
-            "Venustiano Carranza",
-            "Xochimilco"});
-            this.cmbDelegacion.Location = new System.Drawing.Point(466, 154);
-            this.cmbDelegacion.Name = "cmbDelegacion";
-            this.cmbDelegacion.Size = new System.Drawing.Size(184, 23);
-            this.cmbDelegacion.TabIndex = 80;
             // 
             // label10
             // 
@@ -116,6 +94,7 @@
             // txbColonia
             // 
             this.txbColonia.Location = new System.Drawing.Point(466, 114);
+            this.txbColonia.MaxLength = 30;
             this.txbColonia.Name = "txbColonia";
             this.txbColonia.Size = new System.Drawing.Size(184, 23);
             this.txbColonia.TabIndex = 79;
@@ -132,6 +111,7 @@
             // txbNumero
             // 
             this.txbNumero.Location = new System.Drawing.Point(466, 75);
+            this.txbNumero.MaxLength = 30;
             this.txbNumero.Name = "txbNumero";
             this.txbNumero.Size = new System.Drawing.Size(184, 23);
             this.txbNumero.TabIndex = 78;
@@ -148,6 +128,7 @@
             // txbCalle
             // 
             this.txbCalle.Location = new System.Drawing.Point(466, 35);
+            this.txbCalle.MaxLength = 30;
             this.txbCalle.Name = "txbCalle";
             this.txbCalle.Size = new System.Drawing.Size(184, 23);
             this.txbCalle.TabIndex = 77;
@@ -216,6 +197,7 @@
             // txbEmail
             // 
             this.txbEmail.Location = new System.Drawing.Point(107, 257);
+            this.txbEmail.MaxLength = 30;
             this.txbEmail.Name = "txbEmail";
             this.txbEmail.Size = new System.Drawing.Size(184, 23);
             this.txbEmail.TabIndex = 75;
@@ -223,6 +205,7 @@
             // txbTelefono
             // 
             this.txbTelefono.Location = new System.Drawing.Point(107, 216);
+            this.txbTelefono.MaxLength = 10;
             this.txbTelefono.Name = "txbTelefono";
             this.txbTelefono.Size = new System.Drawing.Size(184, 23);
             this.txbTelefono.TabIndex = 74;
@@ -230,6 +213,7 @@
             // txbMaterno
             // 
             this.txbMaterno.Location = new System.Drawing.Point(107, 117);
+            this.txbMaterno.MaxLength = 30;
             this.txbMaterno.Name = "txbMaterno";
             this.txbMaterno.Size = new System.Drawing.Size(184, 23);
             this.txbMaterno.TabIndex = 72;
@@ -237,6 +221,7 @@
             // txbPaterno
             // 
             this.txbPaterno.Location = new System.Drawing.Point(107, 75);
+            this.txbPaterno.MaxLength = 30;
             this.txbPaterno.Name = "txbPaterno";
             this.txbPaterno.Size = new System.Drawing.Size(184, 23);
             this.txbPaterno.TabIndex = 71;
@@ -244,13 +229,14 @@
             // txbNombre
             // 
             this.txbNombre.Location = new System.Drawing.Point(107, 35);
+            this.txbNombre.MaxLength = 30;
             this.txbNombre.Name = "txbNombre";
             this.txbNombre.Size = new System.Drawing.Size(184, 23);
             this.txbNombre.TabIndex = 70;
             // 
             // btnLimpiar
             // 
-            this.btnLimpiar.Location = new System.Drawing.Point(418, 290);
+            this.btnLimpiar.Location = new System.Drawing.Point(466, 314);
             this.btnLimpiar.Name = "btnLimpiar";
             this.btnLimpiar.Size = new System.Drawing.Size(100, 35);
             this.btnLimpiar.TabIndex = 82;
@@ -259,21 +245,40 @@
             // 
             // btnCrear
             // 
-            this.btnCrear.Location = new System.Drawing.Point(556, 290);
+            this.btnCrear.Location = new System.Drawing.Point(572, 314);
             this.btnCrear.Name = "btnCrear";
             this.btnCrear.Size = new System.Drawing.Size(100, 35);
             this.btnCrear.TabIndex = 81;
-            this.btnCrear.Text = "Crear";
+            this.btnCrear.Text = "Cambiar";
             this.btnCrear.UseVisualStyleBackColor = true;
+            // 
+            // btnRegresar
+            // 
+            this.btnRegresar.Location = new System.Drawing.Point(360, 314);
+            this.btnRegresar.Name = "btnRegresar";
+            this.btnRegresar.Size = new System.Drawing.Size(100, 35);
+            this.btnRegresar.TabIndex = 94;
+            this.btnRegresar.Text = "Regresar";
+            this.btnRegresar.UseVisualStyleBackColor = true;
+            this.btnRegresar.Click += new System.EventHandler(this.btnRegresar_Click);
+            // 
+            // txbDelegacion
+            // 
+            this.txbDelegacion.Location = new System.Drawing.Point(466, 154);
+            this.txbDelegacion.MaxLength = 30;
+            this.txbDelegacion.Name = "txbDelegacion";
+            this.txbDelegacion.Size = new System.Drawing.Size(184, 23);
+            this.txbDelegacion.TabIndex = 95;
             // 
             // operadorEditar
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(684, 361);
+            this.Controls.Add(this.txbDelegacion);
+            this.Controls.Add(this.btnRegresar);
             this.Controls.Add(this.label11);
             this.Controls.Add(this.txbLicencia);
-            this.Controls.Add(this.cmbDelegacion);
             this.Controls.Add(this.label10);
             this.Controls.Add(this.label9);
             this.Controls.Add(this.txbColonia);
@@ -296,6 +301,7 @@
             this.Controls.Add(this.btnLimpiar);
             this.Controls.Add(this.btnCrear);
             this.Font = new System.Drawing.Font("Calibri", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "operadorEditar";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Editar Operador";
@@ -309,7 +315,6 @@
 
         private System.Windows.Forms.Label label11;
         private System.Windows.Forms.TextBox txbLicencia;
-        private System.Windows.Forms.ComboBox cmbDelegacion;
         private System.Windows.Forms.Label label10;
         private System.Windows.Forms.Label label9;
         private System.Windows.Forms.TextBox txbColonia;
@@ -331,6 +336,8 @@
         private System.Windows.Forms.TextBox txbNombre;
         private System.Windows.Forms.Button btnLimpiar;
         private System.Windows.Forms.Button btnCrear;
+        private System.Windows.Forms.Button btnRegresar;
+        private System.Windows.Forms.TextBox txbDelegacion;
 
 
     }

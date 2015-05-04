@@ -88,6 +88,7 @@
             // txbLicencia
             // 
             this.txbLicencia.Location = new System.Drawing.Point(96, 300);
+            this.txbLicencia.MaxLength = 15;
             this.txbLicencia.Name = "txbLicencia";
             this.txbLicencia.Size = new System.Drawing.Size(184, 23);
             this.txbLicencia.TabIndex = 6;
@@ -113,6 +114,7 @@
             // txbColonia
             // 
             this.txbColonia.Location = new System.Drawing.Point(455, 117);
+            this.txbColonia.MaxLength = 30;
             this.txbColonia.Name = "txbColonia";
             this.txbColonia.Size = new System.Drawing.Size(184, 23);
             this.txbColonia.TabIndex = 9;
@@ -129,6 +131,7 @@
             // txbNumero
             // 
             this.txbNumero.Location = new System.Drawing.Point(455, 78);
+            this.txbNumero.MaxLength = 5;
             this.txbNumero.Name = "txbNumero";
             this.txbNumero.Size = new System.Drawing.Size(184, 23);
             this.txbNumero.TabIndex = 8;
@@ -145,6 +148,7 @@
             // txbCalle
             // 
             this.txbCalle.Location = new System.Drawing.Point(455, 38);
+            this.txbCalle.MaxLength = 30;
             this.txbCalle.Name = "txbCalle";
             this.txbCalle.Size = new System.Drawing.Size(184, 23);
             this.txbCalle.TabIndex = 7;
@@ -213,6 +217,7 @@
             // txbEmail
             // 
             this.txbEmail.Location = new System.Drawing.Point(96, 260);
+            this.txbEmail.MaxLength = 30;
             this.txbEmail.Name = "txbEmail";
             this.txbEmail.Size = new System.Drawing.Size(184, 23);
             this.txbEmail.TabIndex = 5;
@@ -220,6 +225,7 @@
             // txbTelefono
             // 
             this.txbTelefono.Location = new System.Drawing.Point(96, 219);
+            this.txbTelefono.MaxLength = 10;
             this.txbTelefono.Name = "txbTelefono";
             this.txbTelefono.Size = new System.Drawing.Size(184, 23);
             this.txbTelefono.TabIndex = 4;
@@ -227,6 +233,7 @@
             // txbMaterno
             // 
             this.txbMaterno.Location = new System.Drawing.Point(96, 120);
+            this.txbMaterno.MaxLength = 30;
             this.txbMaterno.Name = "txbMaterno";
             this.txbMaterno.Size = new System.Drawing.Size(184, 23);
             this.txbMaterno.TabIndex = 2;
@@ -234,6 +241,7 @@
             // txbPaterno
             // 
             this.txbPaterno.Location = new System.Drawing.Point(96, 78);
+            this.txbPaterno.MaxLength = 30;
             this.txbPaterno.Name = "txbPaterno";
             this.txbPaterno.Size = new System.Drawing.Size(184, 23);
             this.txbPaterno.TabIndex = 1;
@@ -241,6 +249,7 @@
             // txbNombre
             // 
             this.txbNombre.Location = new System.Drawing.Point(96, 38);
+            this.txbNombre.MaxLength = 30;
             this.txbNombre.Name = "txbNombre";
             this.txbNombre.Size = new System.Drawing.Size(184, 23);
             this.txbNombre.TabIndex = 0;
@@ -253,10 +262,12 @@
             this.btnRegresar.TabIndex = 70;
             this.btnRegresar.Text = "Regresar";
             this.btnRegresar.UseVisualStyleBackColor = true;
+            this.btnRegresar.Click += new System.EventHandler(this.btnRegresar_Click);
             // 
             // txbDelegacion
             // 
             this.txbDelegacion.Location = new System.Drawing.Point(455, 157);
+            this.txbDelegacion.MaxLength = 30;
             this.txbDelegacion.Name = "txbDelegacion";
             this.txbDelegacion.Size = new System.Drawing.Size(183, 23);
             this.txbDelegacion.TabIndex = 10;

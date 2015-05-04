@@ -67,7 +67,7 @@ namespace Traileros
         private void button1_Click(object sender, EventArgs e)
         {
             BaseDatos bd = new BaseDatos();
-            string sql = "Select id AS ID, nombre AS Nombre, paterno AS Paterno, materno AS Materno, licencia AS Licencia FROM operadores WHERE nombre LIKE '%" + txbFiltrar.Text + "%' OR paterno LIKE '%" + txbFiltrar.Text + "%' OR materno LIKE '%" + txbFiltrar.Text + "%' OR licencia LIKE '%" + txbFiltrar.Text + "%'"; 
+            string sql = "SELECT * FROM operadores WHERE nombre LIKE '%" + txbFiltrar.Text + "%' OR paterno LIKE '%" + txbFiltrar.Text + "%' OR materno LIKE '%" + txbFiltrar.Text + "%' OR licencia LIKE '%" + txbFiltrar.Text + "%'"; 
             bd.buscar(sql);
             dgvOperador.DataSource = bd.ds.Tables[0];
         }

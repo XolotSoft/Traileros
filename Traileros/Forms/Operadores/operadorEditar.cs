@@ -44,7 +44,7 @@ namespace Traileros
             txbCalle.Text = Convert.ToString(bd.ds.Tables[0].Rows[0]["calle"]);
             txbNumero.Text = Convert.ToString(bd.ds.Tables[0].Rows[0]["numero"]);
             txbColonia.Text = Convert.ToString(bd.ds.Tables[0].Rows[0]["colonia"]);
-            cmbDelegacion.Text = Convert.ToString(bd.ds.Tables[0].Rows[0]["delegacion"]);
+            txbDelegacion.Text = Convert.ToString(bd.ds.Tables[0].Rows[0]["delegacion"]);
             txbTelefono.Text = Convert.ToString(bd.ds.Tables[0].Rows[0]["telefono"]);
             txbEmail.Text = Convert.ToString(bd.ds.Tables[0].Rows[0]["email"]);
             txbLicencia.Text = Convert.ToString(bd.ds.Tables[0].Rows[0]["licencia"]);
@@ -74,7 +74,7 @@ namespace Traileros
             string sql = "UPDATE operadores SET nombre = '" + txbNombre.Text + "',paterno = '" + txbPaterno.Text + "',materno = '" +
                 txbMaterno.Text + "',calle = '" + txbCalle.Text + "',numero = '" + txbNumero.Text + "',nacimiento = '" +
                 dtpNacimiento.Text + "',colonia = '" + txbColonia.Text + "',telefono = '" + txbTelefono.Text + "',delegacion = '" +
-                cmbDelegacion.Text+ "',email = '" + txbEmail.Text + "',licencia = '" + txbLicencia.Text + "' WHERE id = '"+Variables.id+"'  ";
+                txbDelegacion.Text+ "',email = '" + txbEmail.Text + "',licencia = '" + txbLicencia.Text + "' WHERE id = '"+Variables.id+"'  ";
             if (bd.insertar(sql)) 
             {
                 MessageBox.Show("Se ha modificado correctamente el operador", "Correcto", MessageBoxButtons.OK, MessageBoxIcon.Information);
@@ -101,7 +101,13 @@ namespace Traileros
             }
         }
 
-
-  
+        private void btnRegresar_Click(object sender, EventArgs e)
+        {
+            operadorIndex index = null;
+            index = operadorIndex.Instancia();
+            index.MdiParent = MDI.ActiveForm;
+            index.Show();
+            this.Close();
+        }
     }
 }

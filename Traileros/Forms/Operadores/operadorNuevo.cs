@@ -56,6 +56,15 @@ namespace Traileros
             }
         }
 
+        private void btnRegresar_Click(object sender, EventArgs e)
+        {
+            operadorIndex index = null;
+            index = operadorIndex.Instancia();
+            index.MdiParent = MDI.ActiveForm;
+            index.Show();
+            this.Close();
+        }
+
         private void btnLimpiar_Click(object sender, EventArgs e)
         {
             Limpiar.todo(this);

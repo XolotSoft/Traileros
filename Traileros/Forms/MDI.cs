@@ -24,14 +24,16 @@ namespace Traileros
 
         private void usuarioToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            usuarioIndex index = new usuarioIndex();
+            usuarioIndex index = null;
+            index = usuarioIndex.Instancia();
             index.MdiParent = this;
             index.Show();
         }
 
         private void vehículosToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            vehiculoIndex index = new vehiculoIndex();
+            vehiculosIndex index = null;
+            index = vehiculosIndex.Instancia();
             index.MdiParent = this;
             index.Show();
         }

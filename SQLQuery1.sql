@@ -22,3 +22,14 @@ delegacion varchar(255),
 telefono varchar(255),
 email varchar(255),
 licencia varchar(255));
+GO
+CREATE TABLE vehiculos(
+id int IDENTITY PRIMARY KEY NOT NULL,
+serie varchar(255),
+marca varchar(255),
+tipo varchar(255),
+modelo varchar(255),
+placa varchar(255),
+adquicision date,
+servicio date,
+mantenimiento varchar(255));
