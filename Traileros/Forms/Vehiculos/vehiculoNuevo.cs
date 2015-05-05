@@ -43,7 +43,9 @@ namespace Traileros
             {
                 if (Vacio.cbx(this))
                 {
-                    string sql = "";
+                    string sql = "INSERT INTO vehiculos(serie,marca,tipo,modelo,placa,adquicision,servicio,mantenimiento,estado)VALUES('"+
+                        txbSerie.Text+"','"+txbMarca.Text+"','"+txbTipo.Text+"','"+txbModelo.Text+"','"+txbPlaca.Text+"','"+
+                        dtpAdquicision.Text+"','"+dtpServicio.Text+"','"+cmbMantenimiento.Text+"','libre')";
                     if (bd.insertar(sql))
                     {
                         MessageBox.Show("Vehiculo agregado correctamente", "Atención",
@@ -80,6 +82,11 @@ namespace Traileros
             index.MdiParent = MDI.ActiveForm;
             index.Show();
             this.Close();
+        }
+
+        private void vehiculoNuevo_Load(object sender, EventArgs e)
+        {
+
         }
 
 

@@ -255,6 +255,7 @@
             this.Name = "vehiculoNuevo";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Nuevo Vehículo";
+            this.Load += new System.EventHandler(this.vehiculoNuevo_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 

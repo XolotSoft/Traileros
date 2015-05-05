@@ -21,7 +21,8 @@ colonia varchar(255),
 delegacion varchar(255),
 telefono varchar(255),
 email varchar(255),
-licencia varchar(255));
+licencia varchar(255),
+estado varchar(255));
 GO
 CREATE TABLE vehiculos(
 id int IDENTITY PRIMARY KEY NOT NULL,
@@ -32,4 +33,12 @@ modelo varchar(255),
 placa varchar(255),
 adquicision date,
 servicio date,
-mantenimiento varchar(255));
+mantenimiento varchar(255),
+estado varchar(255));
+GO
+CREATE TABLE destinos(
+id int IDENTITY PRIMARY KEY NOT NULL,
+nombre varchar(255)
+);
+INSERT INTO destinos(nombre)
+VALUES('CD de México'),('Chihuahua'),('Monterrey'),('Hermosillo');

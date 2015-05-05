@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(vehiculoEditar));
             this.label5 = new System.Windows.Forms.Label();
             this.cmbMes = new System.Windows.Forms.ComboBox();
             this.btnEliminar = new System.Windows.Forms.Button();
@@ -250,6 +251,7 @@
             this.Controls.Add(this.txbPlaca);
             this.Controls.Add(this.txbMarca);
             this.Controls.Add(this.txbSerie);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "vehiculoEditar";
             this.Text = "Editar Vehículo";
             this.ResumeLayout(false);

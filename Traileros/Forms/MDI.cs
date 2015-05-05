@@ -52,5 +52,15 @@ namespace Traileros
             Form frm = this.MdiChildren.FirstOrDefault(x => x is operadorEditar || x is operadorNuevo);
             if (frm != null) frm.Close();
         }
+
+        private void entregasToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            Cargas cargas = null;
+            cargas = Cargas.Instancia();
+            cargas.MdiParent = this;
+            cargas.Show();
+            Form frm = this.MdiChildren.FirstOrDefault(x => x is Combustibles || x is Operadores || x is Vehiculos);
+            if (frm != null) frm.Close();
+        }
     }
 }

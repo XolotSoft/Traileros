@@ -107,6 +107,7 @@
             this.entregasToolStripMenuItem.Name = "entregasToolStripMenuItem";
             this.entregasToolStripMenuItem.Size = new System.Drawing.Size(64, 20);
             this.entregasToolStripMenuItem.Text = "Entregas";
+            this.entregasToolStripMenuItem.Click += new System.EventHandler(this.entregasToolStripMenuItem_Click);
             // 
             // ventanasToolStripMenuItem
             // 
@@ -126,7 +127,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackgroundImage = global::Traileros.Properties.Resources.trailer_900;
+            this.BackgroundImage = global::Traileros.Properties.Resources.bg;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
             this.ClientSize = new System.Drawing.Size(980, 557);
             this.Controls.Add(this.statusStrip1);
