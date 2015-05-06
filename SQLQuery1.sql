@@ -42,3 +42,29 @@ nombre varchar(255)
 );
 INSERT INTO destinos(nombre)
 VALUES('CD de México'),('Chihuahua'),('Monterrey'),('Hermosillo');
+GO
+CREATE TABLE cargas(
+id int IDENTITY PRIMARY KEY NOT NULL,
+carga varchar(255),
+origen varchar(255),
+destino varchar(255),
+partida date,
+arribo date,
+kilo decimal(9,2),
+peaje decimal(9,2),
+operador_id int,
+comision int,
+viaticos decimal(9,2),
+vehiculo_id int,
+precio decimal(9,2),
+rendimiento decimal(9,2),
+litros decimal(9,2),
+costo decimal(9,2),
+CONSTRAINT carga_vehiculo
+FOREIGN KEY (vehiculo_id)
+REFERENCES vehiculos(id)
+ON DELETE CASCADE,
+CONSTRAINT carga_operador
+FOREIGN KEY (operador_id)
+REFERENCES operadores(id)
+ON DELETE CASCADE);

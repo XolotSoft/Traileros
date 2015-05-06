@@ -43,26 +43,29 @@
             // 
             // txbLitros
             // 
-            this.txbLitros.Location = new System.Drawing.Point(285, 136);
+            this.txbLitros.Location = new System.Drawing.Point(285, 143);
             this.txbLitros.MaxLength = 30;
             this.txbLitros.Name = "txbLitros";
+            this.txbLitros.ReadOnly = true;
             this.txbLitros.Size = new System.Drawing.Size(184, 20);
-            this.txbLitros.TabIndex = 143;
+            this.txbLitros.TabIndex = 1;
+            this.txbLitros.TabStop = false;
             // 
             // txbRendimiento
             // 
-            this.txbRendimiento.Location = new System.Drawing.Point(285, 92);
+            this.txbRendimiento.Location = new System.Drawing.Point(285, 45);
             this.txbRendimiento.MaxLength = 30;
             this.txbRendimiento.Name = "txbRendimiento";
             this.txbRendimiento.Size = new System.Drawing.Size(184, 20);
-            this.txbRendimiento.TabIndex = 142;
+            this.txbRendimiento.TabIndex = 0;
+            this.txbRendimiento.Leave += new System.EventHandler(this.txbRendimiento_Leave);
             // 
             // btnCancelar
             // 
             this.btnCancelar.Location = new System.Drawing.Point(399, 275);
             this.btnCancelar.Name = "btnCancelar";
             this.btnCancelar.Size = new System.Drawing.Size(100, 35);
-            this.btnCancelar.TabIndex = 141;
+            this.btnCancelar.TabIndex = 2;
             this.btnCancelar.Text = "Cancelar";
             this.btnCancelar.UseVisualStyleBackColor = true;
             this.btnCancelar.Click += new System.EventHandler(this.btnCancelar_Click);
@@ -72,7 +75,7 @@
             this.btnRegistrar.Location = new System.Drawing.Point(505, 275);
             this.btnRegistrar.Name = "btnRegistrar";
             this.btnRegistrar.Size = new System.Drawing.Size(100, 35);
-            this.btnRegistrar.TabIndex = 140;
+            this.btnRegistrar.TabIndex = 1;
             this.btnRegistrar.Text = "Registrar";
             this.btnRegistrar.UseVisualStyleBackColor = true;
             this.btnRegistrar.Click += new System.EventHandler(this.btnRegistrar_Click);
@@ -80,7 +83,7 @@
             // label6
             // 
             this.label6.AutoSize = true;
-            this.label6.Location = new System.Drawing.Point(170, 139);
+            this.label6.Location = new System.Drawing.Point(170, 146);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(109, 13);
             this.label6.TabIndex = 139;
@@ -89,7 +92,7 @@
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(166, 182);
+            this.label4.Location = new System.Drawing.Point(166, 192);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(113, 13);
             this.label4.TabIndex = 138;
@@ -98,7 +101,7 @@
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(99, 95);
+            this.label2.Location = new System.Drawing.Point(99, 48);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(180, 13);
             this.label2.TabIndex = 137;
@@ -107,7 +110,7 @@
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(202, 53);
+            this.label1.Location = new System.Drawing.Point(202, 96);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(77, 13);
             this.label1.TabIndex = 136;
@@ -115,19 +118,23 @@
             // 
             // txbCosto
             // 
-            this.txbCosto.Location = new System.Drawing.Point(285, 179);
+            this.txbCosto.Location = new System.Drawing.Point(285, 189);
             this.txbCosto.MaxLength = 10;
             this.txbCosto.Name = "txbCosto";
+            this.txbCosto.ReadOnly = true;
             this.txbCosto.Size = new System.Drawing.Size(184, 20);
             this.txbCosto.TabIndex = 135;
+            this.txbCosto.TabStop = false;
             // 
             // txbPrecio
             // 
-            this.txbPrecio.Location = new System.Drawing.Point(285, 50);
+            this.txbPrecio.Location = new System.Drawing.Point(285, 93);
             this.txbPrecio.MaxLength = 30;
             this.txbPrecio.Name = "txbPrecio";
+            this.txbPrecio.ReadOnly = true;
             this.txbPrecio.Size = new System.Drawing.Size(184, 20);
             this.txbPrecio.TabIndex = 134;
+            this.txbPrecio.TabStop = false;
             // 
             // Combustibles
             // 
@@ -147,7 +154,7 @@
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "Combustibles";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "Combustibles";
+            this.Text = "Combustible";
             this.ResumeLayout(false);
             this.PerformLayout();
 

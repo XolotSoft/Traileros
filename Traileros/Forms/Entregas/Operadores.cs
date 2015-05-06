@@ -35,7 +35,7 @@ namespace Traileros
         private void Operadores_Load(object sender, EventArgs e)
         {
             BaseDatos ope = new BaseDatos();
-            ope.buscar("SELECT id, (nombre +' '+ paterno +' '+ materno) AS Nombre FROM operadores");
+            ope.buscar("SELECT id, (nombre +' '+ paterno +' '+ materno) AS Nombre FROM operadores WHERE estado = 'libre'");
             cboxOrigen.DataSource = ope.ds.Tables[0];
             cboxOrigen.DisplayMember = "Nombre";
             cboxOrigen.ValueMember = "id";
