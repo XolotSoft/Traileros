@@ -47,6 +47,30 @@
   <ItemGroup>
     <Compile Include="Clases\BaseDatos.cs" />
     <Compile Include="Clases\Coneccion.cs" />
+    <Compile Include="Forms\Entregas\Carga.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Entregas\Carga.Designer.cs">
+      <DependentUpon>Carga.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Entregas\Combustible.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Entregas\Combustible.Designer.cs">
+      <DependentUpon>Combustible.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Entregas\Operador.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Entregas\Operador.Designer.cs">
+      <DependentUpon>Operador.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Entregas\Vehiculo.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Entregas\Vehiculo.Designer.cs">
+      <DependentUpon>Vehiculo.cs</DependentUpon>
+    </Compile>
     <Compile Include="Forms\Operadores\operadorEditar.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -125,6 +149,18 @@
     <Compile Include="Clases\Validar.cs" />
     <Compile Include="Clases\Vacio.cs" />
     <Compile Include="Clases\Variables.cs" />
+    <EmbeddedResource Include="Forms\Entregas\Carga.resx">
+      <DependentUpon>Carga.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Entregas\Combustible.resx">
+      <DependentUpon>Combustible.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Entregas\Operador.resx">
+      <DependentUpon>Operador.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Entregas\Vehiculo.resx">
+      <DependentUpon>Vehiculo.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Forms\Operadores\operadorEditar.resx">
       <DependentUpon>operadorEditar.cs</DependentUpon>
     </EmbeddedResource>
@@ -196,6 +232,7 @@
   <ItemGroup>
     <None Include="Resources\trailer_900.png" />
   </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.
