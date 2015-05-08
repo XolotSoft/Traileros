@@ -35,7 +35,7 @@ namespace Traileros
 
         private void operadorIndex_Load(object sender, EventArgs e)
         {
-            bd.buscar("SELECT id, nombre AS Nombre, paterno AS Paterno, materno AS Materno, licencia AS Licencia FROM operadores");
+            bd.buscar("SELECT id, nombre AS Nombre, paterno AS Paterno, materno AS Materno, licencia AS Licencia, multas AS Multas FROM operadores");
             dgvOperador.SelectionMode = DataGridViewSelectionMode.FullRowSelect;
             dgvOperador.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
             dgvOperador.RowHeadersVisible = false;

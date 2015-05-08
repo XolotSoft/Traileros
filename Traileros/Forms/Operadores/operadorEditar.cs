@@ -109,5 +109,19 @@ namespace Traileros
             index.Show();
             this.Close();
         }
+
+        private void btnMulta_Click(object sender, EventArgs e)
+        {
+            DialogResult dialogo =  MessageBox.Show("REALMENTE DESEAS MULTAR A ESTE OPERADOR", "ATENCION", MessageBoxButtons.OKCancel,MessageBoxIcon.Question);
+            if (dialogo == DialogResult.OK)
+            {
+                BaseDatos update = new BaseDatos();
+                string sql = "UPDATE operadores SET multas = multas + 1 WHERE id = " + Variables.id;
+                if (update.insertar(sql))
+                {
+                    MessageBox.Show("Se ha multado el operador");
+                }
+            }
+        }
     }
 }

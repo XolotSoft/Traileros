@@ -79,6 +79,7 @@ namespace Traileros
                 case 1:
                     txbKilometros.Text = "1787.82";
                     txbPeaje.Text = "3546";
+
                     break;
                 case 2:
                     txbKilometros.Text = "895.77";

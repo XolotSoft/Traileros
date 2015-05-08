@@ -103,6 +103,12 @@
     <Compile Include="Forms\Entregas\Operadores.Designer.cs">
       <DependentUpon>Operadores.cs</DependentUpon>
     </Compile>
+    <Compile Include="Forms\Entregas\indexCargas.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Entregas\indexCargas.Designer.cs">
+      <DependentUpon>indexCargas.cs</DependentUpon>
+    </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Forms\Usuarios\usuarioEditar.cs">
       <SubType>Form</SubType>
@@ -184,6 +190,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\Entregas\Operadores.resx">
       <DependentUpon>Operadores.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Entregas\indexCargas.resx">
+      <DependentUpon>indexCargas.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>

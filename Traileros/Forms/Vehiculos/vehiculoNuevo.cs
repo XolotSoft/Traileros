@@ -43,9 +43,9 @@ namespace Traileros
             {
                 if (Vacio.cbx(this))
                 {
-                    string sql = "INSERT INTO vehiculos(serie,marca,tipo,modelo,placa,adquicision,servicio,mantenimiento,estado)VALUES('"+
+                    string sql = "INSERT INTO vehiculos(serie,marca,tipo,modelo,placa,adquicision,servicio,mantenimiento,estado,DF,Chihuahua,Monterrey,Hermosillo)VALUES('"+
                         txbSerie.Text+"','"+txbMarca.Text+"','"+txbTipo.Text+"','"+txbModelo.Text+"','"+txbPlaca.Text+"','"+
-                        dtpAdquicision.Text+"','"+dtpServicio.Text+"','"+cmbMantenimiento.Text+"','libre')";
+                        dtpAdquicision.Text + "','" + dtpServicio.Text + "','" + cmbMantenimiento.Text + "','libre','0','0','0','0')";
                     if (bd.insertar(sql))
                     {
                         MessageBox.Show("Vehiculo agregado correctamente", "Atención",

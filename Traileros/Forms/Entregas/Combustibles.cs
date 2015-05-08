@@ -43,6 +43,12 @@ namespace Traileros
             string litros = txbLitros.Text;
             string costo = txbCosto.Text;
 
+            string columna = "" ;
+            if (Variables.Destino == "1") columna = "DF";
+            if (Variables.Destino == "2") columna = "Chihuahua";
+            if (Variables.Destino == "3") columna = "Monterrey";
+            if (Variables.Destino == "4") columna = "Hermosillo";
+
             string sql = "INSERT INTO cargas(carga,origen,destino,partida,arribo,kilo,peaje,operador_id,comision,viaticos,vehiculo_id,precio,rendimiento,litros,costo)VALUES('"+
                 Variables.Carga+"','"+Variables.Origen+"','"+Variables.Destino+"','"+Variables.Partida+"','"+Variables.Arribo+"','"+Variables.Kilo+"','"+
                 Variables.Peaje+"','"+Variables.Id+"','"+Variables.Comision+"','"+Variables.Viaticos+"','"+Variables.Vehiculo+"','"+precio+"','"+rendimiento+"','"+litros+"','"+costo+"')";
@@ -51,7 +57,7 @@ namespace Traileros
             {
                 if (com.insertar("UPDATE operadores SET estado = 'ocupado' WHERE id = " + Variables.Id))
                 {
-                    if (com.insertar("UPDATE vehiculos SET estado = 'ocupado' WHERE id = " + Variables.Vehiculo))
+                    if (com.insertar("UPDATE vehiculos SET estado = 'ocupado', "+columna+"  = "+columna+" + 1 WHERE id = " + Variables.Vehiculo))
                     {
                         MessageBox.Show("Se ha guardado correctamente", "Correcto", MessageBoxButtons.OK, MessageBoxIcon.Information);
                         this.Close();

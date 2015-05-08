@@ -54,6 +54,7 @@
             this.btnCrear = new System.Windows.Forms.Button();
             this.btnRegresar = new System.Windows.Forms.Button();
             this.txbDelegacion = new System.Windows.Forms.TextBox();
+            this.btnMulta = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // label11
@@ -270,11 +271,22 @@
             this.txbDelegacion.Size = new System.Drawing.Size(184, 23);
             this.txbDelegacion.TabIndex = 95;
             // 
+            // btnMulta
+            // 
+            this.btnMulta.Location = new System.Drawing.Point(466, 219);
+            this.btnMulta.Name = "btnMulta";
+            this.btnMulta.Size = new System.Drawing.Size(100, 35);
+            this.btnMulta.TabIndex = 96;
+            this.btnMulta.Text = "Multar";
+            this.btnMulta.UseVisualStyleBackColor = true;
+            this.btnMulta.Click += new System.EventHandler(this.btnMulta_Click);
+            // 
             // operadorEditar
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(684, 361);
+            this.Controls.Add(this.btnMulta);
             this.Controls.Add(this.txbDelegacion);
             this.Controls.Add(this.btnRegresar);
             this.Controls.Add(this.label11);
@@ -338,6 +350,7 @@
         private System.Windows.Forms.Button btnCrear;
         private System.Windows.Forms.Button btnRegresar;
         private System.Windows.Forms.TextBox txbDelegacion;
+        private System.Windows.Forms.Button btnMulta;
 
 
     }

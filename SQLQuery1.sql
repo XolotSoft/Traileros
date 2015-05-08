@@ -22,6 +22,7 @@ delegacion varchar(255),
 telefono varchar(255),
 email varchar(255),
 licencia varchar(255),
+multas int,
 estado varchar(255));
 GO
 CREATE TABLE vehiculos(
@@ -34,6 +35,10 @@ placa varchar(255),
 adquicision date,
 servicio date,
 mantenimiento varchar(255),
+DF int,
+Chihuahua int,
+Moterrey int,
+Hermosillo int,
 estado varchar(255));
 GO
 CREATE TABLE destinos(

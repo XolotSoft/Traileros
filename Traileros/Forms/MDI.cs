@@ -55,11 +55,11 @@ namespace Traileros
 
         private void entregasToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            Cargas cargas = null;
-            cargas = Cargas.Instancia();
+            indexCargas cargas = null;
+            cargas = indexCargas.Instancia();
             cargas.MdiParent = this;
             cargas.Show();
-            Form frm = this.MdiChildren.FirstOrDefault(x => x is Combustibles || x is Operadores || x is Vehiculos);
+            Form frm = this.MdiChildren.FirstOrDefault(x => x is Combustibles || x is Operadores || x is Vehiculos || x is Cargas);
             if (frm != null) frm.Close();
         }
     }
