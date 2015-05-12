@@ -35,8 +35,7 @@ namespace Traileros
 
         private void btnCrear_Click(object sender, EventArgs e)
         {
-            BaseDatos bd = new BaseDatos();
-            string sql = "INSERT INTO usuarios(nombre, username, password, rol) VALUES('"+txbNombre.Text+"','"+txbUsuario.Text+"','"+txbPass.Text+"','"+cmbRol.Text+"')";
+            string sql = "INSERT INTO usuarios(nombre, username, password, rol) VALUES('" + txbNombre.Text.Trim() + "','" + txbUsuario.Text.Trim() + "','" + txbPass.Text.Trim() + "','" + cmbRol.Text + "')";
             if (Vacio.txb(this))
             {
                 if (Vacio.cbx(this))
@@ -47,6 +46,7 @@ namespace Traileros
                         {
                             MessageBox.Show("Usuario creado correctamente", "Atención",
                                 MessageBoxButtons.OK, MessageBoxIcon.Information);
+                            Index();
                         }
                         else
                         {
@@ -75,6 +75,10 @@ namespace Traileros
         }
 
         private void btnRegresar_Click(object sender, EventArgs e)
+        {
+            Index();
+        }
+        private void Index()
         {
             usuarioIndex index = null;
             index = usuarioIndex.Instancia();

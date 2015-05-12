@@ -54,6 +54,17 @@
             this.txbNombre = new System.Windows.Forms.TextBox();
             this.btnRegresar = new System.Windows.Forms.Button();
             this.txbDelegacion = new System.Windows.Forms.TextBox();
+            this.label12 = new System.Windows.Forms.Label();
+            this.label13 = new System.Windows.Forms.Label();
+            this.label14 = new System.Windows.Forms.Label();
+            this.label15 = new System.Windows.Forms.Label();
+            this.label16 = new System.Windows.Forms.Label();
+            this.label17 = new System.Windows.Forms.Label();
+            this.label18 = new System.Windows.Forms.Label();
+            this.label19 = new System.Windows.Forms.Label();
+            this.label20 = new System.Windows.Forms.Label();
+            this.label21 = new System.Windows.Forms.Label();
+            this.label22 = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // btnCrear
@@ -92,15 +103,16 @@
             this.txbLicencia.Name = "txbLicencia";
             this.txbLicencia.Size = new System.Drawing.Size(184, 23);
             this.txbLicencia.TabIndex = 6;
+            this.txbLicencia.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txbLicencia_KeyPress);
             // 
             // label10
             // 
             this.label10.AutoSize = true;
-            this.label10.Location = new System.Drawing.Point(384, 160);
+            this.label10.Location = new System.Drawing.Point(378, 160);
             this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(65, 15);
+            this.label10.Size = new System.Drawing.Size(71, 15);
             this.label10.TabIndex = 66;
-            this.label10.Text = "Dlegacion:";
+            this.label10.Text = "Delegación:";
             // 
             // label9
             // 
@@ -118,6 +130,7 @@
             this.txbColonia.Name = "txbColonia";
             this.txbColonia.Size = new System.Drawing.Size(184, 23);
             this.txbColonia.TabIndex = 9;
+            this.txbColonia.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txbColonia_KeyPress);
             // 
             // label8
             // 
@@ -126,7 +139,7 @@
             this.label8.Name = "label8";
             this.label8.Size = new System.Drawing.Size(53, 15);
             this.label8.TabIndex = 63;
-            this.label8.Text = "Numero:";
+            this.label8.Text = "Número:";
             // 
             // txbNumero
             // 
@@ -135,6 +148,7 @@
             this.txbNumero.Name = "txbNumero";
             this.txbNumero.Size = new System.Drawing.Size(184, 23);
             this.txbNumero.TabIndex = 8;
+            this.txbNumero.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txbNumero_KeyPress);
             // 
             // label7
             // 
@@ -152,6 +166,7 @@
             this.txbCalle.Name = "txbCalle";
             this.txbCalle.Size = new System.Drawing.Size(184, 23);
             this.txbCalle.TabIndex = 7;
+            this.txbCalle.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txbCalle_KeyPress);
             // 
             // label6
             // 
@@ -185,7 +200,7 @@
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(56, 15);
             this.label4.TabIndex = 56;
-            this.label4.Text = "Telefono:";
+            this.label4.Text = "Teléfono:";
             // 
             // label3
             // 
@@ -229,6 +244,7 @@
             this.txbTelefono.Name = "txbTelefono";
             this.txbTelefono.Size = new System.Drawing.Size(184, 23);
             this.txbTelefono.TabIndex = 4;
+            this.txbTelefono.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txbTelefono_KeyPress);
             // 
             // txbMaterno
             // 
@@ -237,6 +253,7 @@
             this.txbMaterno.Name = "txbMaterno";
             this.txbMaterno.Size = new System.Drawing.Size(184, 23);
             this.txbMaterno.TabIndex = 2;
+            this.txbMaterno.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txbMaterno_KeyPress);
             // 
             // txbPaterno
             // 
@@ -245,6 +262,7 @@
             this.txbPaterno.Name = "txbPaterno";
             this.txbPaterno.Size = new System.Drawing.Size(184, 23);
             this.txbPaterno.TabIndex = 1;
+            this.txbPaterno.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txbPaterno_KeyPress);
             // 
             // txbNombre
             // 
@@ -253,6 +271,7 @@
             this.txbNombre.Name = "txbNombre";
             this.txbNombre.Size = new System.Drawing.Size(184, 23);
             this.txbNombre.TabIndex = 0;
+            this.txbNombre.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txbNombre_KeyPress);
             // 
             // btnRegresar
             // 
@@ -271,12 +290,135 @@
             this.txbDelegacion.Name = "txbDelegacion";
             this.txbDelegacion.Size = new System.Drawing.Size(183, 23);
             this.txbDelegacion.TabIndex = 10;
+            this.txbDelegacion.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txbDelegacion_KeyPress);
+            // 
+            // label12
+            // 
+            this.label12.AutoSize = true;
+            this.label12.ForeColor = System.Drawing.Color.DarkRed;
+            this.label12.Location = new System.Drawing.Point(286, 41);
+            this.label12.Name = "label12";
+            this.label12.Size = new System.Drawing.Size(13, 15);
+            this.label12.TabIndex = 71;
+            this.label12.Text = "*";
+            // 
+            // label13
+            // 
+            this.label13.AutoSize = true;
+            this.label13.ForeColor = System.Drawing.Color.DarkRed;
+            this.label13.Location = new System.Drawing.Point(286, 81);
+            this.label13.Name = "label13";
+            this.label13.Size = new System.Drawing.Size(13, 15);
+            this.label13.TabIndex = 72;
+            this.label13.Text = "*";
+            // 
+            // label14
+            // 
+            this.label14.AutoSize = true;
+            this.label14.ForeColor = System.Drawing.Color.DarkRed;
+            this.label14.Location = new System.Drawing.Point(286, 125);
+            this.label14.Name = "label14";
+            this.label14.Size = new System.Drawing.Size(13, 15);
+            this.label14.TabIndex = 73;
+            this.label14.Text = "*";
+            // 
+            // label15
+            // 
+            this.label15.AutoSize = true;
+            this.label15.ForeColor = System.Drawing.Color.DarkRed;
+            this.label15.Location = new System.Drawing.Point(286, 165);
+            this.label15.Name = "label15";
+            this.label15.Size = new System.Drawing.Size(13, 15);
+            this.label15.TabIndex = 74;
+            this.label15.Text = "*";
+            // 
+            // label16
+            // 
+            this.label16.AutoSize = true;
+            this.label16.ForeColor = System.Drawing.Color.DarkRed;
+            this.label16.Location = new System.Drawing.Point(286, 222);
+            this.label16.Name = "label16";
+            this.label16.Size = new System.Drawing.Size(13, 15);
+            this.label16.TabIndex = 75;
+            this.label16.Text = "*";
+            // 
+            // label17
+            // 
+            this.label17.AutoSize = true;
+            this.label17.ForeColor = System.Drawing.Color.DarkRed;
+            this.label17.Location = new System.Drawing.Point(286, 263);
+            this.label17.Name = "label17";
+            this.label17.Size = new System.Drawing.Size(13, 15);
+            this.label17.TabIndex = 76;
+            this.label17.Text = "*";
+            // 
+            // label18
+            // 
+            this.label18.AutoSize = true;
+            this.label18.ForeColor = System.Drawing.Color.DarkRed;
+            this.label18.Location = new System.Drawing.Point(286, 303);
+            this.label18.Name = "label18";
+            this.label18.Size = new System.Drawing.Size(13, 15);
+            this.label18.TabIndex = 77;
+            this.label18.Text = "*";
+            // 
+            // label19
+            // 
+            this.label19.AutoSize = true;
+            this.label19.ForeColor = System.Drawing.Color.DarkRed;
+            this.label19.Location = new System.Drawing.Point(645, 41);
+            this.label19.Name = "label19";
+            this.label19.Size = new System.Drawing.Size(13, 15);
+            this.label19.TabIndex = 78;
+            this.label19.Text = "*";
+            // 
+            // label20
+            // 
+            this.label20.AutoSize = true;
+            this.label20.ForeColor = System.Drawing.Color.DarkRed;
+            this.label20.Location = new System.Drawing.Point(645, 123);
+            this.label20.Name = "label20";
+            this.label20.Size = new System.Drawing.Size(13, 15);
+            this.label20.TabIndex = 79;
+            this.label20.Text = "*";
+            // 
+            // label21
+            // 
+            this.label21.AutoSize = true;
+            this.label21.ForeColor = System.Drawing.Color.DarkRed;
+            this.label21.Location = new System.Drawing.Point(644, 165);
+            this.label21.Name = "label21";
+            this.label21.Size = new System.Drawing.Size(13, 15);
+            this.label21.TabIndex = 80;
+            this.label21.Text = "*";
+            // 
+            // label22
+            // 
+            this.label22.AutoSize = true;
+            this.label22.Font = new System.Drawing.Font("Calibri", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label22.ForeColor = System.Drawing.Color.DarkRed;
+            this.label22.Location = new System.Drawing.Point(509, 228);
+            this.label22.Name = "label22";
+            this.label22.Size = new System.Drawing.Size(129, 14);
+            this.label22.TabIndex = 81;
+            this.label22.Text = "* Campos obligatorios";
             // 
             // operadorNuevo
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(684, 361);
+            this.Controls.Add(this.label22);
+            this.Controls.Add(this.label21);
+            this.Controls.Add(this.label20);
+            this.Controls.Add(this.label19);
+            this.Controls.Add(this.label18);
+            this.Controls.Add(this.label17);
+            this.Controls.Add(this.label16);
+            this.Controls.Add(this.label15);
+            this.Controls.Add(this.label14);
+            this.Controls.Add(this.label13);
+            this.Controls.Add(this.label12);
             this.Controls.Add(this.txbDelegacion);
             this.Controls.Add(this.btnRegresar);
             this.Controls.Add(this.label11);
@@ -339,6 +481,17 @@
         private System.Windows.Forms.TextBox txbNombre;
         private System.Windows.Forms.Button btnRegresar;
         private System.Windows.Forms.TextBox txbDelegacion;
+        private System.Windows.Forms.Label label12;
+        private System.Windows.Forms.Label label13;
+        private System.Windows.Forms.Label label14;
+        private System.Windows.Forms.Label label15;
+        private System.Windows.Forms.Label label16;
+        private System.Windows.Forms.Label label17;
+        private System.Windows.Forms.Label label18;
+        private System.Windows.Forms.Label label19;
+        private System.Windows.Forms.Label label20;
+        private System.Windows.Forms.Label label21;
+        private System.Windows.Forms.Label label22;
 
     }
 }

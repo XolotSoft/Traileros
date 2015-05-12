@@ -40,14 +40,14 @@
             // 
             // txbFiltrar
             // 
-            this.txbFiltrar.Location = new System.Drawing.Point(12, 46);
+            this.txbFiltrar.Location = new System.Drawing.Point(12, 36);
             this.txbFiltrar.Name = "txbFiltrar";
             this.txbFiltrar.Size = new System.Drawing.Size(219, 23);
             this.txbFiltrar.TabIndex = 7;
             // 
             // button1
             // 
-            this.button1.Location = new System.Drawing.Point(237, 39);
+            this.button1.Location = new System.Drawing.Point(237, 29);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(100, 35);
             this.button1.TabIndex = 8;
@@ -70,7 +70,7 @@
             // 
             // btnNuevo
             // 
-            this.btnNuevo.Location = new System.Drawing.Point(372, 39);
+            this.btnNuevo.Location = new System.Drawing.Point(372, 29);
             this.btnNuevo.Name = "btnNuevo";
             this.btnNuevo.Size = new System.Drawing.Size(100, 35);
             this.btnNuevo.TabIndex = 9;
@@ -81,18 +81,21 @@
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(13, 92);
+            this.label1.Font = new System.Drawing.Font("Calibri", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Location = new System.Drawing.Point(12, 95);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(125, 15);
+            this.label1.Size = new System.Drawing.Size(107, 13);
             this.label1.TabIndex = 10;
             this.label1.Text = "Catálogo de Usuarios";
             // 
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(273, 92);
+            this.label2.Font = new System.Drawing.Font("Calibri", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.ForeColor = System.Drawing.Color.DarkBlue;
+            this.label2.Location = new System.Drawing.Point(254, 89);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(199, 15);
+            this.label2.Size = new System.Drawing.Size(218, 18);
             this.label2.TabIndex = 11;
             this.label2.Text = "Seleciona un usuario para editarlo";
             // 

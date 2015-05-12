@@ -62,7 +62,7 @@
             this.lblVersion.Name = "lblVersion";
             this.lblVersion.Size = new System.Drawing.Size(69, 13);
             this.lblVersion.TabIndex = 2;
-            this.lblVersion.Text = "Versión 1.0.0";
+            this.lblVersion.Text = "Versión 1.1.0";
             // 
             // SplashScreen
             // 

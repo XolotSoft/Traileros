@@ -50,11 +50,14 @@
             this.txbMaterno = new System.Windows.Forms.TextBox();
             this.txbPaterno = new System.Windows.Forms.TextBox();
             this.txbNombre = new System.Windows.Forms.TextBox();
-            this.btnLimpiar = new System.Windows.Forms.Button();
+            this.btnEliminar = new System.Windows.Forms.Button();
             this.btnCrear = new System.Windows.Forms.Button();
             this.btnRegresar = new System.Windows.Forms.Button();
             this.txbDelegacion = new System.Windows.Forms.TextBox();
             this.btnMulta = new System.Windows.Forms.Button();
+            this.btnQuitar = new System.Windows.Forms.Button();
+            this.gpbMultas = new System.Windows.Forms.GroupBox();
+            this.gpbMultas.SuspendLayout();
             this.SuspendLayout();
             // 
             // label11
@@ -73,6 +76,7 @@
             this.txbLicencia.Name = "txbLicencia";
             this.txbLicencia.Size = new System.Drawing.Size(184, 23);
             this.txbLicencia.TabIndex = 76;
+            this.txbLicencia.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txbLicencia_KeyPress);
             // 
             // label10
             // 
@@ -99,6 +103,7 @@
             this.txbColonia.Name = "txbColonia";
             this.txbColonia.Size = new System.Drawing.Size(184, 23);
             this.txbColonia.TabIndex = 79;
+            this.txbColonia.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txbColonia_KeyPress);
             // 
             // label8
             // 
@@ -112,10 +117,11 @@
             // txbNumero
             // 
             this.txbNumero.Location = new System.Drawing.Point(466, 75);
-            this.txbNumero.MaxLength = 30;
+            this.txbNumero.MaxLength = 5;
             this.txbNumero.Name = "txbNumero";
             this.txbNumero.Size = new System.Drawing.Size(184, 23);
             this.txbNumero.TabIndex = 78;
+            this.txbNumero.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txbNumero_KeyPress);
             // 
             // label7
             // 
@@ -133,6 +139,7 @@
             this.txbCalle.Name = "txbCalle";
             this.txbCalle.Size = new System.Drawing.Size(184, 23);
             this.txbCalle.TabIndex = 77;
+            this.txbCalle.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txbCalle_KeyPress);
             // 
             // label6
             // 
@@ -210,6 +217,7 @@
             this.txbTelefono.Name = "txbTelefono";
             this.txbTelefono.Size = new System.Drawing.Size(184, 23);
             this.txbTelefono.TabIndex = 74;
+            this.txbTelefono.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txbTelefono_KeyPress);
             // 
             // txbMaterno
             // 
@@ -218,6 +226,7 @@
             this.txbMaterno.Name = "txbMaterno";
             this.txbMaterno.Size = new System.Drawing.Size(184, 23);
             this.txbMaterno.TabIndex = 72;
+            this.txbMaterno.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txbMaterno_KeyPress);
             // 
             // txbPaterno
             // 
@@ -226,6 +235,7 @@
             this.txbPaterno.Name = "txbPaterno";
             this.txbPaterno.Size = new System.Drawing.Size(184, 23);
             this.txbPaterno.TabIndex = 71;
+            this.txbPaterno.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txbPaterno_KeyPress);
             // 
             // txbNombre
             // 
@@ -234,15 +244,17 @@
             this.txbNombre.Name = "txbNombre";
             this.txbNombre.Size = new System.Drawing.Size(184, 23);
             this.txbNombre.TabIndex = 70;
+            this.txbNombre.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txbNombre_KeyPress);
             // 
-            // btnLimpiar
+            // btnEliminar
             // 
-            this.btnLimpiar.Location = new System.Drawing.Point(466, 314);
-            this.btnLimpiar.Name = "btnLimpiar";
-            this.btnLimpiar.Size = new System.Drawing.Size(100, 35);
-            this.btnLimpiar.TabIndex = 82;
-            this.btnLimpiar.Text = "Eliminar";
-            this.btnLimpiar.UseVisualStyleBackColor = true;
+            this.btnEliminar.Location = new System.Drawing.Point(466, 314);
+            this.btnEliminar.Name = "btnEliminar";
+            this.btnEliminar.Size = new System.Drawing.Size(100, 35);
+            this.btnEliminar.TabIndex = 82;
+            this.btnEliminar.Text = "Eliminar";
+            this.btnEliminar.UseVisualStyleBackColor = true;
+            this.btnEliminar.Click += new System.EventHandler(this.btnEliminar_Click_1);
             // 
             // btnCrear
             // 
@@ -252,6 +264,7 @@
             this.btnCrear.TabIndex = 81;
             this.btnCrear.Text = "Cambiar";
             this.btnCrear.UseVisualStyleBackColor = true;
+            this.btnCrear.Click += new System.EventHandler(this.btnCrear_Click);
             // 
             // btnRegresar
             // 
@@ -270,23 +283,45 @@
             this.txbDelegacion.Name = "txbDelegacion";
             this.txbDelegacion.Size = new System.Drawing.Size(184, 23);
             this.txbDelegacion.TabIndex = 95;
+            this.txbDelegacion.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txbDelegacion_KeyPress);
             // 
             // btnMulta
             // 
-            this.btnMulta.Location = new System.Drawing.Point(466, 219);
+            this.btnMulta.Location = new System.Drawing.Point(12, 19);
             this.btnMulta.Name = "btnMulta";
             this.btnMulta.Size = new System.Drawing.Size(100, 35);
             this.btnMulta.TabIndex = 96;
-            this.btnMulta.Text = "Multar";
+            this.btnMulta.Text = "Agregar";
             this.btnMulta.UseVisualStyleBackColor = true;
             this.btnMulta.Click += new System.EventHandler(this.btnMulta_Click);
+            // 
+            // btnQuitar
+            // 
+            this.btnQuitar.Location = new System.Drawing.Point(118, 19);
+            this.btnQuitar.Name = "btnQuitar";
+            this.btnQuitar.Size = new System.Drawing.Size(100, 35);
+            this.btnQuitar.TabIndex = 97;
+            this.btnQuitar.Text = "Quitar";
+            this.btnQuitar.UseVisualStyleBackColor = true;
+            this.btnQuitar.Click += new System.EventHandler(this.btnQuitar_Click);
+            // 
+            // gpbMultas
+            // 
+            this.gpbMultas.Controls.Add(this.btnQuitar);
+            this.gpbMultas.Controls.Add(this.btnMulta);
+            this.gpbMultas.Location = new System.Drawing.Point(444, 219);
+            this.gpbMultas.Name = "gpbMultas";
+            this.gpbMultas.Size = new System.Drawing.Size(228, 66);
+            this.gpbMultas.TabIndex = 98;
+            this.gpbMultas.TabStop = false;
+            this.gpbMultas.Text = "Multas";
             // 
             // operadorEditar
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(684, 361);
-            this.Controls.Add(this.btnMulta);
+            this.Controls.Add(this.gpbMultas);
             this.Controls.Add(this.txbDelegacion);
             this.Controls.Add(this.btnRegresar);
             this.Controls.Add(this.label11);
@@ -310,7 +345,7 @@
             this.Controls.Add(this.txbMaterno);
             this.Controls.Add(this.txbPaterno);
             this.Controls.Add(this.txbNombre);
-            this.Controls.Add(this.btnLimpiar);
+            this.Controls.Add(this.btnEliminar);
             this.Controls.Add(this.btnCrear);
             this.Font = new System.Drawing.Font("Calibri", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
@@ -318,6 +353,7 @@
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Editar Operador";
             this.Load += new System.EventHandler(this.operadorEditar_Load);
+            this.gpbMultas.ResumeLayout(false);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -346,11 +382,13 @@
         private System.Windows.Forms.TextBox txbMaterno;
         private System.Windows.Forms.TextBox txbPaterno;
         private System.Windows.Forms.TextBox txbNombre;
-        private System.Windows.Forms.Button btnLimpiar;
+        private System.Windows.Forms.Button btnEliminar;
         private System.Windows.Forms.Button btnCrear;
         private System.Windows.Forms.Button btnRegresar;
         private System.Windows.Forms.TextBox txbDelegacion;
         private System.Windows.Forms.Button btnMulta;
+        private System.Windows.Forms.Button btnQuitar;
+        private System.Windows.Forms.GroupBox gpbMultas;
 
 
     }

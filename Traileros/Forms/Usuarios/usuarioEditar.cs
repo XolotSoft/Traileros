@@ -41,31 +41,27 @@ namespace Traileros
 
         private void btnRegresar_Click(object sender, EventArgs e)
         {
-            usuarioIndex index = null;
-            index = usuarioIndex.Instancia();
-            index.MdiParent = MDI.ActiveForm;
-            index.Show();
-            this.Close();
+            Index();
         }
 
         private void btnEliminar_Click(object sender, EventArgs e)
         {
-            string sql = "DELETE FROM usuarios WHERE id = '" + Variables.id + "'";
-            if (bd.insertar(sql))
+            DialogResult dialogo = MessageBox.Show("Realmente deseas eliminar el registro", "", MessageBoxButtons.OKCancel, MessageBoxIcon.Question);
+            if (dialogo == DialogResult.OK)
             {
-                MessageBox.Show("Se ha eliminado correctamente el usuario", "Correcto",
-                    MessageBoxButtons.OK, MessageBoxIcon.Information);
-                usuarioIndex index = null;
-                index = usuarioIndex.Instancia();
-                index.MdiParent = MDI.ActiveForm;
-                index.Show();
-                this.Close();
-            }
-            else
-            {
-                MessageBox.Show("No se ha eliminado", "Atención",
-                    MessageBoxButtons.OK, MessageBoxIcon.Error);
-            }
+                string sql = "DELETE FROM usuarios WHERE id = '" + Variables.id + "'";
+                if (bd.insertar(sql))
+                {
+                    MessageBox.Show("Se ha eliminado correctamente el usuario", "Correcto",
+                        MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    Index();
+                }
+                else
+                {
+                    MessageBox.Show("No se ha eliminado", "Atención",
+                        MessageBoxButtons.OK, MessageBoxIcon.Error);
+                }
+            } 
         }
 
         private void btnModificar_Click(object sender, EventArgs e)
@@ -81,11 +77,7 @@ namespace Traileros
                         {
                             MessageBox.Show("Se ha modificado correctamente el usuario", "Correcto",
                                 MessageBoxButtons.OK, MessageBoxIcon.Information);
-                            usuarioIndex index = null;
-                            index = usuarioIndex.Instancia();
-                            index.MdiParent = MDI.ActiveForm;
-                            index.Show();
-                            this.Close();
+                            Index();
                         }
                         else
                         {
@@ -110,6 +102,15 @@ namespace Traileros
                 MessageBox.Show("Debes llenar todos los campos", "Atención",
                            MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
+        }
+
+        private void Index()
+        {
+            usuarioIndex index = null;
+            index = usuarioIndex.Instancia();
+            index.MdiParent = MDI.ActiveForm;
+            index.Show();
+            this.Close();
         }
 
         #region validaciones
