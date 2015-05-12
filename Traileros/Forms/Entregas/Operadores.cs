@@ -23,11 +23,7 @@ namespace Traileros
 
         public static Operadores Instancia()
         {
-            if (frmInst == null || frmInst.IsDisposed == true)
-            {
-                frmInst = new Operadores();
-            }
-
+            if (frmInst == null || frmInst.IsDisposed == true) frmInst = new Operadores();
             frmInst.BringToFront();
             return frmInst;
         }
@@ -43,15 +39,30 @@ namespace Traileros
 
         private void btnSiguiente_Click(object sender, EventArgs e)
         {
-            string operador = Convert.ToString(cboxOrigen.SelectedValue);
-            string comision = cmbComision.Text;
-            string viaticos = txbViatico.Text;
-            Variables.operador(operador, comision, viaticos);
-            Vehiculos veh = null;
-            veh = Vehiculos.Instancia();
-            veh.MdiParent = MDI.ActiveForm;
-            veh.Show();
-            this.Close();
+            if (Vacio.txb(this))
+            {
+                if (Vacio.cbx(this))
+                {
+                    string operador = Convert.ToString(cboxOrigen.SelectedValue);
+                    string comision = cmbComision.Text;
+                    string viaticos = txbViatico.Text;
+                    Variables.operador(operador, comision, viaticos);
+                    Vehiculos veh = null;
+                    veh = Vehiculos.Instancia();
+                    veh.MdiParent = MDI.ActiveForm;
+                    veh.Show();
+                    this.Close();
+                }
+                else
+                {
+                    MessageBox.Show("Debes seleccionar alguna opción", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                } 
+            }
+            else
+            {
+                MessageBox.Show("Debes llenar todos los campos", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+           
         }
 
         private void btnLimpiar_Click(object sender, EventArgs e)

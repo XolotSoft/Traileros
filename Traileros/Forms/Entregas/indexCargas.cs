@@ -56,11 +56,31 @@ namespace Traileros
 
         private void btnNuevo_Click(object sender, EventArgs e)
         {
-            Cargas nuevo = null;
-            nuevo = Cargas.Instancia();
-            nuevo.MdiParent = MDI.ActiveForm;
-            nuevo.Show();
-            this.Close();
+            BaseDatos ope = new BaseDatos();
+            BaseDatos veh = new BaseDatos();
+
+            ope.buscar("SELECT * FROM operadores WHERE estado = 'libre' AND multas < 3");
+            MessageBox.Show(Convert.ToString(ope.ds.Tables[0].Rows.Count));
+            if (ope.ds.Tables[0].Rows.Count < 1)
+            {
+                MessageBox.Show("No hay operadores disponobles", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+            else
+            {
+                veh.buscar("SELECT * FROM vehiculos WHERE estado = 'libre'");
+                if (veh.ds.Tables[0].Rows.Count < 1)
+                {
+                    MessageBox.Show("No hay vehiculos disponobles", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                }
+                else
+                {
+                    Cargas nuevo = null;
+                    nuevo = Cargas.Instancia();
+                    nuevo.MdiParent = MDI.ActiveForm;
+                    nuevo.Show();
+                    this.Close();
+                }
+            }          
         }
     }
 }

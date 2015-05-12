@@ -42,8 +42,7 @@ namespace Traileros
             des.buscar("SELECT * FROM destinos");
             cboxOrigen.DisplayMember = "nombre";
             cboxOrigen.ValueMember = "id";
-            cboxOrigen.DataSource = des.ds.Tables[0].DefaultView;
-            
+            cboxOrigen.DataSource = des.ds.Tables[0].DefaultView;              
         }
 
         private void cboxOrigen_SelectedIndexChanged(object sender, EventArgs e)
@@ -130,6 +129,15 @@ namespace Traileros
             {
                 MessageBox.Show("No puedes dejar campos vacios","Error",MessageBoxButtons.OK,MessageBoxIcon.Error);
             }
+        }
+
+        private void Index()
+        {
+            indexCargas index = null;
+            index = indexCargas.Instancia();
+            index.MdiParent = MDI.ActiveForm;
+            index.Show();
+            this.Hide();
         }
 
         private void btnLimpiar_Click(object sender, EventArgs e)

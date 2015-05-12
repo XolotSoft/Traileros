@@ -46,11 +46,12 @@
             this.txbCargamento = new System.Windows.Forms.TextBox();
             this.btnLimpiar = new System.Windows.Forms.Button();
             this.btnSiguiente = new System.Windows.Forms.Button();
+            this.label3 = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // dtpArribo
             // 
-            this.dtpArribo.Location = new System.Drawing.Point(457, 143);
+            this.dtpArribo.Location = new System.Drawing.Point(457, 149);
             this.dtpArribo.Name = "dtpArribo";
             this.dtpArribo.Size = new System.Drawing.Size(184, 20);
             this.dtpArribo.TabIndex = 140;
@@ -59,7 +60,7 @@
             // 
             this.cboxDestino.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cboxDestino.FormattingEnabled = true;
-            this.cboxDestino.Location = new System.Drawing.Point(457, 95);
+            this.cboxDestino.Location = new System.Drawing.Point(457, 101);
             this.cboxDestino.Name = "cboxDestino";
             this.cboxDestino.Size = new System.Drawing.Size(184, 21);
             this.cboxDestino.TabIndex = 139;
@@ -69,7 +70,7 @@
             // 
             this.cboxOrigen.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cboxOrigen.FormattingEnabled = true;
-            this.cboxOrigen.Location = new System.Drawing.Point(120, 94);
+            this.cboxOrigen.Location = new System.Drawing.Point(120, 100);
             this.cboxOrigen.Name = "cboxOrigen";
             this.cboxOrigen.Size = new System.Drawing.Size(184, 21);
             this.cboxOrigen.TabIndex = 138;
@@ -77,7 +78,7 @@
             // 
             // txbPeaje
             // 
-            this.txbPeaje.Location = new System.Drawing.Point(457, 191);
+            this.txbPeaje.Location = new System.Drawing.Point(457, 197);
             this.txbPeaje.MaxLength = 30;
             this.txbPeaje.Name = "txbPeaje";
             this.txbPeaje.ReadOnly = true;
@@ -97,7 +98,7 @@
             // label10
             // 
             this.label10.AutoSize = true;
-            this.label10.Location = new System.Drawing.Point(398, 194);
+            this.label10.Location = new System.Drawing.Point(398, 200);
             this.label10.Name = "label10";
             this.label10.Size = new System.Drawing.Size(37, 13);
             this.label10.TabIndex = 135;
@@ -106,7 +107,7 @@
             // label9
             // 
             this.label9.AutoSize = true;
-            this.label9.Location = new System.Drawing.Point(398, 148);
+            this.label9.Location = new System.Drawing.Point(398, 154);
             this.label9.Name = "label9";
             this.label9.Size = new System.Drawing.Size(37, 13);
             this.label9.TabIndex = 134;
@@ -115,7 +116,7 @@
             // label8
             // 
             this.label8.AutoSize = true;
-            this.label8.Location = new System.Drawing.Point(398, 103);
+            this.label8.Location = new System.Drawing.Point(398, 109);
             this.label8.Name = "label8";
             this.label8.Size = new System.Drawing.Size(46, 13);
             this.label8.TabIndex = 133;
@@ -124,7 +125,7 @@
             // label6
             // 
             this.label6.AutoSize = true;
-            this.label6.Location = new System.Drawing.Point(45, 150);
+            this.label6.Location = new System.Drawing.Point(45, 156);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(43, 13);
             this.label6.TabIndex = 132;
@@ -132,7 +133,7 @@
             // 
             // dtpPartida
             // 
-            this.dtpPartida.Location = new System.Drawing.Point(120, 145);
+            this.dtpPartida.Location = new System.Drawing.Point(120, 151);
             this.dtpPartida.Name = "dtpPartida";
             this.dtpPartida.Size = new System.Drawing.Size(184, 20);
             this.dtpPartida.TabIndex = 125;
@@ -140,7 +141,7 @@
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(36, 197);
+            this.label4.Location = new System.Drawing.Point(36, 203);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(58, 13);
             this.label4.TabIndex = 131;
@@ -149,7 +150,7 @@
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(47, 103);
+            this.label2.Location = new System.Drawing.Point(47, 109);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(41, 13);
             this.label2.TabIndex = 130;
@@ -166,7 +167,7 @@
             // 
             // txbKilometros
             // 
-            this.txbKilometros.Location = new System.Drawing.Point(120, 194);
+            this.txbKilometros.Location = new System.Drawing.Point(120, 200);
             this.txbKilometros.MaxLength = 10;
             this.txbKilometros.Name = "txbKilometros";
             this.txbKilometros.ReadOnly = true;
@@ -202,11 +203,22 @@
             this.btnSiguiente.UseVisualStyleBackColor = true;
             this.btnSiguiente.Click += new System.EventHandler(this.btnSiguiente_Click);
             // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.ForeColor = System.Drawing.Color.DarkRed;
+            this.label3.Location = new System.Drawing.Point(117, 71);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(56, 13);
+            this.label3.TabIndex = 141;
+            this.label3.Text = "Requerido";
+            // 
             // Cargas
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(684, 361);
+            this.Controls.Add(this.label3);
             this.Controls.Add(this.dtpArribo);
             this.Controls.Add(this.cboxDestino);
             this.Controls.Add(this.cboxOrigen);
@@ -253,5 +265,6 @@
         private System.Windows.Forms.TextBox txbCargamento;
         private System.Windows.Forms.Button btnLimpiar;
         private System.Windows.Forms.Button btnSiguiente;
+        private System.Windows.Forms.Label label3;
     }
 }
