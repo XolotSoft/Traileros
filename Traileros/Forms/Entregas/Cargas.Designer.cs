@@ -180,6 +180,7 @@
             this.txbCargamento.Name = "txbCargamento";
             this.txbCargamento.Size = new System.Drawing.Size(521, 20);
             this.txbCargamento.TabIndex = 124;
+            this.txbCargamento.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txbCargamento_KeyPress);
             // 
             // btnLimpiar
             // 

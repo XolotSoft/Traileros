@@ -16,18 +16,18 @@ namespace Traileros
 
         public bool insertar(string sql)
         {
-            cmd = new SqlCommand(sql, Coneccion.conectar());
+            cmd = new SqlCommand(sql, Conexion.conectar());
             int i = cmd.ExecuteNonQuery();
-            Coneccion.desconectar();
+            Conexion.desconectar();
             if (i > 0) return true; else return false;
         }
 
         public void buscar(string sql)
         {
-            cmd = new SqlCommand(sql, Coneccion.conectar());
+            cmd = new SqlCommand(sql, Conexion.conectar());
             da = new SqlDataAdapter(cmd);
             da.Fill(ds);
-            Coneccion.desconectar();
+            Conexion.desconectar();
         }
     }
 }

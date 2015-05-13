@@ -39,11 +39,13 @@
             this.label1 = new System.Windows.Forms.Label();
             this.txbCosto = new System.Windows.Forms.TextBox();
             this.txbPrecio = new System.Windows.Forms.TextBox();
+            this.label3 = new System.Windows.Forms.Label();
+            this.label5 = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // txbLitros
             // 
-            this.txbLitros.Location = new System.Drawing.Point(285, 143);
+            this.txbLitros.Location = new System.Drawing.Point(289, 170);
             this.txbLitros.MaxLength = 30;
             this.txbLitros.Name = "txbLitros";
             this.txbLitros.ReadOnly = true;
@@ -53,12 +55,13 @@
             // 
             // txbRendimiento
             // 
-            this.txbRendimiento.Location = new System.Drawing.Point(285, 45);
-            this.txbRendimiento.MaxLength = 30;
+            this.txbRendimiento.Location = new System.Drawing.Point(289, 72);
+            this.txbRendimiento.MaxLength = 1;
             this.txbRendimiento.Name = "txbRendimiento";
             this.txbRendimiento.Size = new System.Drawing.Size(184, 20);
             this.txbRendimiento.TabIndex = 0;
-            this.txbRendimiento.Leave += new System.EventHandler(this.txbRendimiento_Leave);
+            this.txbRendimiento.TextChanged += new System.EventHandler(this.txbRendimiento_TextChanged);
+            this.txbRendimiento.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txbRendimiento_KeyPress);
             // 
             // btnCancelar
             // 
@@ -83,7 +86,7 @@
             // label6
             // 
             this.label6.AutoSize = true;
-            this.label6.Location = new System.Drawing.Point(170, 146);
+            this.label6.Location = new System.Drawing.Point(174, 173);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(109, 13);
             this.label6.TabIndex = 139;
@@ -92,7 +95,7 @@
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(166, 192);
+            this.label4.Location = new System.Drawing.Point(170, 219);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(113, 13);
             this.label4.TabIndex = 138;
@@ -101,7 +104,7 @@
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(99, 48);
+            this.label2.Location = new System.Drawing.Point(103, 75);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(180, 13);
             this.label2.TabIndex = 137;
@@ -110,7 +113,7 @@
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(202, 96);
+            this.label1.Location = new System.Drawing.Point(206, 123);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(77, 13);
             this.label1.TabIndex = 136;
@@ -118,7 +121,7 @@
             // 
             // txbCosto
             // 
-            this.txbCosto.Location = new System.Drawing.Point(285, 189);
+            this.txbCosto.Location = new System.Drawing.Point(289, 216);
             this.txbCosto.MaxLength = 10;
             this.txbCosto.Name = "txbCosto";
             this.txbCosto.ReadOnly = true;
@@ -128,7 +131,7 @@
             // 
             // txbPrecio
             // 
-            this.txbPrecio.Location = new System.Drawing.Point(285, 93);
+            this.txbPrecio.Location = new System.Drawing.Point(289, 120);
             this.txbPrecio.MaxLength = 30;
             this.txbPrecio.Name = "txbPrecio";
             this.txbPrecio.ReadOnly = true;
@@ -136,11 +139,36 @@
             this.txbPrecio.TabIndex = 134;
             this.txbPrecio.TabStop = false;
             // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 6.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label3.ForeColor = System.Drawing.Color.DarkRed;
+            this.label3.Location = new System.Drawing.Point(291, 93);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(43, 12);
+            this.label3.TabIndex = 140;
+            this.label3.Text = "requerido";
+            // 
+            // label5
+            // 
+            this.label5.AutoSize = true;
+            this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label5.ForeColor = System.Drawing.Color.DarkBlue;
+            this.label5.Location = new System.Drawing.Point(27, 13);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(522, 16);
+            this.label5.TabIndex = 141;
+            this.label5.Text = "Ingresa el rendimiento por litro de la unidad para realizar los calculos automati" +
+    "camente";
+            // 
             // Combustibles
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(684, 361);
+            this.Controls.Add(this.label5);
+            this.Controls.Add(this.label3);
             this.Controls.Add(this.txbLitros);
             this.Controls.Add(this.txbRendimiento);
             this.Controls.Add(this.btnCancelar);
@@ -154,7 +182,7 @@
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "Combustibles";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "Combustible";
+            this.Text = " ";
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -172,5 +200,7 @@
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.TextBox txbCosto;
         private System.Windows.Forms.TextBox txbPrecio;
+        private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.Label label5;
     }
 }

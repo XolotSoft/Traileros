@@ -110,22 +110,26 @@ namespace Traileros
 
         private void btnSiguiente_Click(object sender, EventArgs e)
         {
-            string carga = txbCargamento.Text;
-            string origen = Convert.ToString(cboxOrigen.SelectedValue);
-            string destino = Convert.ToString(cboxDestino.SelectedValue);
-            string partida = dtpPartida.Text;
-            string arribo = dtpArribo.Text;
-            string kilo = txbKilometros.Text;
-            string peaje = txbPeaje.Text;
-
-            Variables.carga(carga,origen,destino,partida,arribo,kilo,peaje);
-
-            Operadores ope = null;
-            ope = Operadores.Instancia();
-            ope.MdiParent = MDI.ActiveForm;
-            ope.Show();
-            this.Close();
-
+            if (Vacio.txb(this))
+            {
+                string carga = txbCargamento.Text;
+                string origen = Convert.ToString(cboxOrigen.SelectedValue);
+                string destino = Convert.ToString(cboxDestino.SelectedValue);
+                string partida = dtpPartida.Text;
+                string arribo = dtpArribo.Text;
+                string kilo = txbKilometros.Text;
+                string peaje = txbPeaje.Text;
+                Variables.carga(carga, origen, destino, partida, arribo, kilo, peaje);
+                Operadores ope = null;
+                ope = Operadores.Instancia();
+                ope.MdiParent = MDI.ActiveForm;
+                ope.Show();
+                this.Close();
+            }
+            else
+            {
+                MessageBox.Show("No puedes dejar campos vacios","Error",MessageBoxButtons.OK,MessageBoxIcon.Error);
+            }
         }
 
         private void btnLimpiar_Click(object sender, EventArgs e)
@@ -136,6 +140,11 @@ namespace Traileros
         private void btnRegresar_Click(object sender, EventArgs e)
         {
             this.Close();
+        }
+
+        private void txbCargamento_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            Validar.letynumesp(e);
         }
     }
 }

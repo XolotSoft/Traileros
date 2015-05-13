@@ -78,15 +78,23 @@ namespace Traileros
             }
         }
 
-        private void txbRendimiento_Leave(object sender, EventArgs e)
+        private void txbRendimiento_TextChanged(object sender, EventArgs e)
         {
-            double precio = 14.35;
-            double rendimiento = Convert.ToDouble(txbRendimiento.Text);
-            double litros = Convert.ToDouble(Variables.Kilo)/ rendimiento;
-            double costo = precio * litros;
+            if (txbRendimiento.Text != string.Empty)
+            {
+                double precio = 14.35;
+                double rendimiento = Convert.ToDouble(txbRendimiento.Text);
+                double litros = Convert.ToDouble(Variables.Kilo) / rendimiento;
+                double costo = precio * litros;
 
-            txbLitros.Text = Convert.ToString(litros);
-            txbCosto.Text = Convert.ToString(costo);
+                txbLitros.Text = Convert.ToString(litros);
+                txbCosto.Text = Convert.ToString(Math.Round(costo,2));
+            }
+        }
+
+        private void txbRendimiento_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            Validar.num(e);
         }
     }
 }

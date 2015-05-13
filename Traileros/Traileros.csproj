@@ -52,7 +52,7 @@
       <DependentUpon>Cargas.cs</DependentUpon>
     </Compile>
     <Compile Include="Clases\BaseDatos.cs" />
-    <Compile Include="Clases\Coneccion.cs" />
+    <Compile Include="Clases\Conexion.cs" />
     <Compile Include="Forms\Entregas\Combustibles.cs">
       <SubType>Form</SubType>
     </Compile>
